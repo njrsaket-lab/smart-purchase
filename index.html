@@ -1,0 +1,2962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>SMART — Purchase Department</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/png;base64,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" />
+<style>
+  /* =====================================================
+     SMART — PURCHASE DEPARTMENT REPORTING SYSTEM
+     Brand: Orange #F58220 + Black + White, Montserrat
+     ===================================================== */
+  :root {
+    --orange: #F58220;
+    --orange-dark: #D96C0E;
+    --orange-light: #FFF1E3;
+    --black: #000000;
+    --ink: #111111;
+    --gray-900: #1a1a1a;
+    --gray-700: #444;
+    --gray-500: #757575;
+    --gray-400: #9a9a9a;
+    --gray-300: #d0d0d0;
+    --gray-200: #e6e6e6;
+    --gray-100: #f2f2f2;
+    --gray-50: #fafafa;
+    --white: #ffffff;
+    --crit: #d63b3b;
+    --high: #F58220;
+    --med: #2c8fd9;
+    --low: #2a8a4a;
+    --plan: #757575;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: var(--white);
+    color: var(--ink);
+    font-family: 'Montserrat', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body { min-height: 100vh; padding-bottom: 76px; }
+
+  /* ===== TOP BAR ===== */
+  .topbar {
+    background: var(--black);
+    color: var(--white);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 3px solid var(--orange);
+  }
+  .topbar-brand { display: flex; align-items: center; gap: 10px; }
+  .topbar-logo {
+    width: 36px; height: 36px;
+    background: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px;
+  }
+  .topbar-logo img { width: 26px; height: 26px; object-fit: contain; filter: invert(0); }
+  .topbar-title {
+    font-size: 14px; font-weight: 800; letter-spacing: 0.06em; line-height: 1;
+  }
+  .topbar-sub {
+    font-size: 9px; color: var(--orange); letter-spacing: 0.18em;
+    text-transform: uppercase; margin-top: 3px; font-weight: 600;
+  }
+  .role-badge {
+    background: transparent;
+    border: 1.5px solid var(--orange);
+    color: var(--orange);
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.15s;
+  }
+  .role-badge:hover { background: var(--orange); color: var(--black); }
+
+  /* ===== SCREEN MGMT ===== */
+  .screen { display: none; padding: 16px; max-width: 1100px; margin: 0 auto; }
+  .screen.active { display: block; }
+
+  /* ===== HOME ===== */
+  .home-hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 32px 24px 28px;
+    border-radius: 6px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .home-hero::before {
+    content: '';
+    position: absolute; right: -40px; top: -40px;
+    width: 200px; height: 200px;
+    background: var(--orange);
+    transform: rotate(45deg);
+    opacity: 0.15;
+  }
+  .home-hero .accent {
+    color: var(--orange);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 700;
+    position: relative;
+  }
+  .home-hero h1 {
+    font-size: 30px; font-weight: 900; letter-spacing: -0.02em;
+    line-height: 1.05; margin-bottom: 10px;
+    position: relative;
+  }
+  .home-hero h1 span { color: var(--orange); }
+  .home-hero p {
+    color: var(--gray-300); font-size: 13px; line-height: 1.55;
+    position: relative; max-width: 460px;
+  }
+
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .section-head h2 {
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em;
+  }
+  .section-head .sub {
+    font-size: 10px; color: var(--gray-500); font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+
+  /* ===== ROLE GRID ===== */
+  .role-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    margin-bottom: 20px;
+  }
+  .role-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 6px;
+    padding: 18px 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+  .role-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px; background: var(--orange);
+    transform: translateX(-100%); transition: transform 0.2s;
+  }
+  .role-card:hover {
+    border-color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .role-card:hover::before { transform: translateX(0); }
+  .role-card-num {
+    font-size: 10px; font-weight: 700; color: var(--orange);
+    letter-spacing: 0.2em; margin-bottom: 8px;
+  }
+  .role-card-title { font-size: 15px; font-weight: 800; margin-bottom: 5px; letter-spacing: -0.005em; }
+  .role-card-desc { font-size: 11px; color: var(--gray-500); line-height: 1.45; font-weight: 500; }
+
+  /* ===== BACK BUTTON ===== */
+  .back-btn {
+    background: transparent; border: none; color: var(--gray-700);
+    font-size: 12px; cursor: pointer; padding: 6px 0; margin-bottom: 6px;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Montserrat'; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .back-btn:hover { color: var(--orange); }
+
+  /* ===== FORM ===== */
+  .card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+  .form-group label .req { color: var(--orange); margin-left: 2px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: var(--white);
+    color: var(--ink);
+    transition: border 0.15s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.15);
+  }
+  .form-group textarea { min-height: 78px; resize: vertical; line-height: 1.4; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .help-text { font-size: 11px; color: var(--gray-500); margin-top: 5px; line-height: 1.4; }
+
+  /* ===== URGENCY CHIPS ===== */
+  .urgency-row { display: flex; gap: 5px; flex-wrap: wrap; }
+  .urg-chip {
+    flex: 1; min-width: 78px;
+    padding: 9px 6px;
+    border: 1.5px solid var(--gray-200);
+    background: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: all 0.15s;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray-700);
+    line-height: 1.3;
+  }
+  .urg-chip small { font-weight: 500; opacity: 0.8; font-size: 9px; display: block; margin-top: 2px; }
+  .urg-chip[data-level="critical"].active { background: var(--crit); border-color: var(--crit); color: white; }
+  .urg-chip[data-level="high"].active { background: var(--orange); border-color: var(--orange); color: var(--black); }
+  .urg-chip[data-level="medium"].active { background: var(--med); border-color: var(--med); color: white; }
+  .urg-chip[data-level="low"].active { background: var(--low); border-color: var(--low); color: white; }
+  .urg-chip[data-level="planned"].active { background: var(--plan); border-color: var(--plan); color: white; }
+
+  /* ===== VENDOR ROWS ===== */
+  .vendor-row {
+    display: grid;
+    grid-template-columns: 1fr 110px 36px;
+    gap: 6px;
+    margin-bottom: 6px;
+    align-items: center;
+  }
+  .vendor-row input { font-size: 13px; padding: 8px 10px; }
+  .vendor-remove {
+    background: var(--gray-100);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+    width: 36px; height: 38px;
+    cursor: pointer;
+    color: var(--crit);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .vendor-remove:hover { background: var(--crit); color: white; border-color: var(--crit); }
+  .add-vendor-btn {
+    background: var(--white);
+    border: 1.5px dashed var(--gray-300);
+    color: var(--gray-700);
+    padding: 9px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .add-vendor-btn:hover { background: var(--orange-light); border-color: var(--orange); color: var(--orange-dark); }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.15s;
+    text-align: center;
+  }
+  .btn-primary { background: var(--orange); color: var(--black); width: 100%; }
+  .btn-primary:hover { background: var(--orange-dark); color: var(--white); }
+  .btn-black { background: var(--black); color: var(--white); }
+  .btn-black:hover { background: var(--orange); color: var(--black); }
+  .btn-ghost { background: transparent; color: var(--gray-700); border: 1.5px solid var(--gray-300); }
+  .btn-ghost:hover { background: var(--gray-100); border-color: var(--gray-700); color: var(--black); }
+  .btn-danger { background: var(--white); color: var(--crit); border: 1.5px solid var(--crit); }
+  .btn-danger:hover { background: var(--crit); color: var(--white); }
+  .btn-success { background: var(--low); color: var(--white); }
+  .btn-success:hover { background: #1f6e3a; }
+
+  /* ===== FILTER BAR ===== */
+  .filter-bar {
+    display: flex; gap: 6px; overflow-x: auto;
+    margin-bottom: 14px; padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-chip {
+    padding: 8px 14px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .filter-chip.active {
+    background: var(--black); color: var(--orange); border-color: var(--black);
+  }
+
+  /* ===== REQUEST CARD ===== */
+  .request-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 6px;
+    padding: 13px 14px 13px 18px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.15s;
+  }
+  .request-card:hover { border-color: var(--black); }
+  .request-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--gray-300);
+    border-radius: 6px 0 0 6px;
+  }
+  .request-card.urg-critical::before { background: var(--crit); }
+  .request-card.urg-high::before { background: var(--orange); }
+  .request-card.urg-medium::before { background: var(--med); }
+  .request-card.urg-low::before { background: var(--low); }
+  .request-card.urg-planned::before { background: var(--plan); }
+
+  .req-top {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+    margin-bottom: 6px;
+  }
+  .req-id {
+    font-size: 9px;
+    color: var(--gray-500);
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .req-title { font-size: 14px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+  .req-meta {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    font-size: 11px; color: var(--gray-500);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .req-meta b { color: var(--ink); font-weight: 700; }
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .badge-critical { background: var(--crit); color: white; }
+  .badge-high { background: var(--orange); color: var(--black); }
+  .badge-medium { background: var(--med); color: white; }
+  .badge-low { background: var(--low); color: white; }
+  .badge-planned { background: var(--plan); color: white; }
+  .badge-pending_approval { background: var(--gray-200); color: var(--gray-700); }
+  .badge-approved { background: #d4f0e0; color: #1e5a35; }
+  .badge-quoted { background: var(--orange-light); color: var(--orange-dark); }
+  .badge-purchased { background: #d3e8f9; color: #1d5a8c; }
+  .badge-delivered { background: var(--low); color: white; }
+  .badge-rejected { background: var(--crit); color: white; }
+  .badge-cancelled { background: var(--gray-300); color: var(--gray-700); }
+
+  .req-actions {
+    display: flex; gap: 5px; margin-top: 10px;
+    border-top: 1px solid var(--gray-100);
+    padding-top: 10px;
+    flex-wrap: wrap;
+  }
+  .req-actions .btn { padding: 7px 11px; font-size: 9px; flex: 1; min-width: 80px; }
+
+  /* ===== KPI CARDS ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .kpi-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 6px;
+    padding: 13px 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi-label {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    color: var(--black);
+  }
+  .kpi-sub { font-size: 10px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
+  .kpi-card.accent {
+    background: var(--black); color: var(--white);
+    border-color: var(--black);
+  }
+  .kpi-card.accent .kpi-label { color: var(--orange); }
+  .kpi-card.accent .kpi-value { color: var(--orange); }
+  .kpi-card.accent .kpi-sub { color: var(--gray-300); }
+
+  /* ===== REPORTS ===== */
+  .report-block { margin-bottom: 16px; }
+  .report-header {
+    background: var(--black);
+    color: var(--white);
+    padding: 12px 14px;
+    border-radius: 4px 4px 0 0;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .report-header h3 {
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800;
+  }
+  .report-header .date {
+    font-size: 10px;
+    color: var(--orange); font-weight: 700; letter-spacing: 0.08em;
+  }
+  .report-body {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    overflow-x: auto;
+  }
+  .report-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .report-table th {
+    text-align: left;
+    padding: 9px 12px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    border-bottom: 1.5px solid var(--gray-200);
+    font-weight: 800;
+    background: var(--gray-50);
+  }
+  .report-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: top;
+    font-weight: 500;
+  }
+  .report-table td.num { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .report-table tr:last-child td { border-bottom: none; }
+  .report-table tfoot td {
+    font-weight: 800; background: var(--gray-50);
+    border-top: 2px solid var(--black);
+  }
+
+  /* ===== LEDGER ===== */
+  .project-tabs {
+    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px;
+  }
+  .project-tab {
+    padding: 8px 12px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .project-tab.active {
+    background: var(--black); color: var(--orange); border-color: var(--black);
+  }
+
+  .ledger-summary {
+    background: var(--black);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ledger-summary::before {
+    content: ''; position: absolute; right: -30px; bottom: -30px;
+    width: 140px; height: 140px;
+    background: var(--orange); opacity: 0.15;
+    transform: rotate(45deg);
+  }
+  .ledger-summary .label {
+    font-size: 10px; color: var(--orange); font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px;
+    position: relative;
+  }
+  .ledger-summary .total {
+    font-size: 34px; font-weight: 900; letter-spacing: -0.025em;
+    color: var(--orange);
+    position: relative;
+  }
+  .ledger-summary .project-name {
+    font-size: 13px; font-weight: 600; color: var(--gray-300); margin-top: 4px;
+    position: relative;
+  }
+  .ledger-summary .breakdown {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+  }
+  .ledger-summary .breakdown div {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gray-300); font-weight: 700;
+  }
+  .ledger-summary .breakdown .num {
+    font-size: 18px; font-weight: 800; color: var(--white);
+    display: block; margin-top: 4px; letter-spacing: -0.01em;
+    text-transform: none;
+  }
+
+  /* ===== MODAL ===== */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  .modal-overlay.show { display: flex; animation: fadeIn 0.2s; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal {
+    background: var(--white);
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 12px 12px 0 0;
+    max-height: 92vh;
+    overflow-y: auto;
+    animation: slideUp 0.25s;
+    border-top: 4px solid var(--orange);
+  }
+  @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .modal-head {
+    padding: 14px 18px;
+    border-bottom: 1.5px solid var(--gray-200);
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; background: white; z-index: 1;
+  }
+  .modal-head h3 { font-size: 15px; font-weight: 800; }
+  .modal-close {
+    background: none; border: none; font-size: 26px; cursor: pointer;
+    color: var(--gray-500); line-height: 1; padding: 0; width: 32px; height: 32px;
+  }
+  .modal-close:hover { color: var(--black); }
+  .modal-body { padding: 18px; }
+  .detail-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 13px;
+  }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-row .lab {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--gray-500); font-weight: 700;
+    padding-top: 3px;
+  }
+  .detail-row .val { color: var(--ink); font-weight: 500; }
+
+  .vendor-list-mini {
+    background: var(--gray-50);
+    border-radius: 4px; padding: 8px 10px;
+    margin-top: 6px; font-size: 12px;
+  }
+  .vendor-list-mini .v-row {
+    display: flex; justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dashed var(--gray-200);
+  }
+  .vendor-list-mini .v-row:last-child { border-bottom: none; }
+  .vendor-list-mini .v-row.best { font-weight: 700; color: var(--low); }
+  .vendor-list-mini .v-row.best::after { content: '✓ BEST'; font-size: 9px; }
+
+  .timeline {
+    list-style: none; padding: 0; margin: 8px 0 0;
+    border-left: 2px solid var(--orange);
+    padding-left: 14px;
+  }
+  .timeline li {
+    margin-bottom: 10px; font-size: 12px;
+    position: relative;
+  }
+  .timeline li::before {
+    content: ''; position: absolute; left: -19px; top: 4px;
+    width: 8px; height: 8px; background: var(--orange);
+    border-radius: 50%; border: 2px solid var(--white);
+    box-shadow: 0 0 0 1px var(--orange);
+  }
+  .timeline li .when { font-size: 10px; color: var(--gray-500); font-weight: 600; }
+
+  /* ===== FOOTER NAV ===== */
+  .footer-nav {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--black);
+    border-top: 3px solid var(--orange);
+    display: flex;
+    z-index: 40;
+  }
+  .nav-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 4px 12px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--gray-400);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Montserrat', sans-serif;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    transition: color 0.15s;
+  }
+  .nav-btn .ico { font-size: 18px; line-height: 1; }
+  .nav-btn.active { color: var(--orange); }
+  .nav-btn:hover { color: var(--white); }
+  .nav-btn.active:hover { color: var(--orange); }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 88px;
+    left: 50%; transform: translateX(-50%);
+    background: var(--black);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    border-left: 4px solid var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    box-shadow: var(--shadow-lg);
+  }
+  .toast.show { opacity: 1; }
+
+  .empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+  .empty-state .ico { font-size: 38px; margin-bottom: 10px; opacity: 0.3; }
+  .empty-state b { display: block; color: var(--ink); font-size: 14px; margin-bottom: 4px; }
+
+  /* ===== INTRO STRIP ===== */
+  .intro-strip {
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    padding: 12px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .intro-strip b { font-weight: 800; }
+
+  /* ============ V2 ADDITIONS ============ */
+
+  /* ===== VENDOR DIRECTORY ===== */
+  .vendor-master-card {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.15s;
+  }
+  .vendor-master-card:hover { border-color: var(--black); }
+  .vendor-master-card .vm-head {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+    margin-bottom: 8px;
+  }
+  .vendor-master-card .vm-name {
+    font-size: 15px; font-weight: 800; line-height: 1.25;
+  }
+  .vendor-master-card .vm-contact {
+    font-size: 11px; color: var(--gray-500); font-weight: 500;
+    margin-top: 3px;
+  }
+  .vendor-master-card .vm-rating {
+    background: var(--orange-light);
+    color: var(--orange-dark);
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .vendor-master-card .vm-tags {
+    display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px;
+  }
+  .vendor-master-card .vm-tag {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .vm-tag-process { background: #e8f0fc; color: #1d5a8c; }
+  .vm-tag-material { background: #fbe8e8; color: #8c2828; }
+  .vm-tag-project { background: var(--orange-light); color: var(--orange-dark); }
+  .vendor-master-card .vm-rates {
+    font-size: 11px; color: var(--gray-700);
+    background: var(--gray-50);
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .vendor-master-card .vm-rates b { color: var(--ink); }
+
+  /* ===== TAG PICKER ===== */
+  .tag-picker {
+    display: flex; gap: 4px; flex-wrap: wrap; padding: 8px 0 4px;
+  }
+  .tag-pick {
+    padding: 6px 10px;
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-700);
+    font-family: 'Montserrat', sans-serif;
+  }
+  .tag-pick.active { background: var(--black); color: var(--orange); border-color: var(--black); }
+
+  /* ===== FILE UPLOAD ===== */
+  .upload-zone {
+    border: 1.5px dashed var(--gray-300);
+    border-radius: 4px;
+    padding: 14px;
+    text-align: center;
+    background: var(--gray-50);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+  .upload-zone:hover { border-color: var(--orange); background: var(--orange-light); color: var(--orange-dark); }
+  .upload-zone .ico { font-size: 22px; display: block; margin-bottom: 4px; }
+  .upload-zone small { display: block; font-size: 10px; font-weight: 500; color: var(--gray-500); margin-top: 4px; }
+
+  .attached-list { margin-top: 8px; }
+  .attached-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .attached-item .ico {
+    width: 28px; height: 28px;
+    background: var(--orange);
+    color: var(--black);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .attached-item .meta { flex: 1; min-width: 0; }
+  .attached-item .name {
+    font-weight: 700; font-size: 12px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .attached-item .info { font-size: 10px; color: var(--gray-500); margin-top: 2px; }
+  .attached-item .info .lbl {
+    text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em;
+    color: var(--orange-dark); margin-right: 6px;
+  }
+  .attached-item button {
+    background: transparent;
+    border: none;
+    color: var(--gray-500);
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .attached-item button:hover { color: var(--orange-dark); }
+  .attached-item button.del:hover { color: var(--crit); }
+
+  .file-type-tabs {
+    display: flex; gap: 4px; margin-top: 4px; margin-bottom: 8px;
+  }
+  .file-type-tab {
+    flex: 1;
+    padding: 7px 6px;
+    border: 1.5px solid var(--gray-200);
+    background: var(--white);
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--gray-700);
+    font-family: 'Montserrat', sans-serif;
+  }
+  .file-type-tab.active { background: var(--orange); border-color: var(--orange); color: var(--black); }
+
+  /* ===== SETTINGS ===== */
+  .settings-section {
+    margin-bottom: 18px;
+  }
+  .settings-section h3 {
+    font-size: 13px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--orange);
+    display: inline-block;
+  }
+  .routing-rule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+    background: var(--gray-50);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .routing-rule .label-mini {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--gray-500); font-weight: 800; margin-bottom: 4px;
+    display: block;
+  }
+  .routing-rule input { width: 100%; }
+
+  /* ===== PREVIEW MODAL ===== */
+  .preview-img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 4px;
+    border: 1.5px solid var(--gray-200);
+    display: block;
+    margin: 0 auto;
+  }
+  .preview-pdf {
+    width: 100%; height: 70vh;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+  }
+
+
+  /* sync pill states */
+  #syncPill[data-state="online"]  { color: #2a8a4a !important; border-color: #2a8a4a !important; }
+  #syncPill[data-state="syncing"] { color: #F58220 !important; border-color: #F58220 !important; }
+  #syncPill[data-state="offline"] { color: #d63b3b !important; border-color: #d63b3b !important; }
+
+  /* ===== DESKTOP ===== */
+  @media (min-width: 768px) {
+    .role-grid { grid-template-columns: repeat(4, 1fr); }
+    .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+    .home-hero { padding: 50px 36px 44px; }
+    .home-hero h1 { font-size: 44px; }
+    .home-hero p { font-size: 15px; }
+    .topbar { padding: 14px 22px; }
+    .screen { padding: 22px; }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .topbar, .footer-nav, .filter-bar, .back-btn, .req-actions, .modal-overlay, .role-badge { display: none !important; }
+    body { padding-bottom: 0; background: white; }
+    .request-card, .card, .report-body { break-inside: avoid; }
+    .home-hero { background: white !important; color: black !important; border: 2px solid black; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================ TOP BAR ================ -->
+<header class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-logo"><img src="data:image/png;base64,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" alt="SMART" /></div>
+    <div>
+      <div class="topbar-title">SMART</div>
+      <div class="topbar-sub">Purchase Dept</div>
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:8px;">
+    <span id="syncPill" data-state="online" onclick="manualSync()" style="font-size:9px; font-weight:700; padding:5px 9px; border-radius:3px; cursor:pointer; letter-spacing:0.08em; text-transform:uppercase; background:#1a1a1a; color:#7a8a9d; border:1px solid #2a3b4d;">● Online</span>
+    <button class="role-badge" id="roleSwitch" onclick="goHome()">Switch</button>
+  </div>
+</header>
+
+<!-- ================ HOME / ROLE SELECT ================ -->
+<section class="screen active" id="screen-home">
+  <div class="home-hero">
+    <span class="accent">/// Procurement Workflow v1</span>
+    <h1>Right material.<br/>Right time.<br/><span>Tracked.</span></h1>
+    <p>One pipeline for every purchase — production, R&amp;D, custom projects, maintenance, admin and personal. Routed, prioritised, reported.</p>
+  </div>
+
+  <div class="section-head">
+    <h2>Choose your role</h2>
+    <span class="sub">Step 01</span>
+  </div>
+
+  <div class="role-grid">
+    <div class="role-card" onclick="setRole('requester')">
+      <div class="role-card-num">01 / RAISE</div>
+      <div class="role-card-title">New Request</div>
+      <div class="role-card-desc">Dept Head or Director — submit a purchase requirement.</div>
+    </div>
+    <div class="role-card" onclick="setRole('purchase')">
+      <div class="role-card-num">02 / PROCURE</div>
+      <div class="role-card-title">Purchase Head</div>
+      <div class="role-card-desc">Live queue, vendors, status, deliveries.</div>
+    </div>
+    <div class="role-card" onclick="setRole('approver')">
+      <div class="role-card-num">03 / APPROVE</div>
+      <div class="role-card-title">GM / Approver</div>
+      <div class="role-card-desc">Sign off requests above the ₹10,000 threshold.</div>
+    </div>
+    <div class="role-card" onclick="setRole('director')">
+      <div class="role-card-num">04 / REVIEW</div>
+      <div class="role-card-title">Director / CEO</div>
+      <div class="role-card-desc">Daily, weekly &amp; monthly purchase reports.</div>
+    </div>
+  </div>
+
+  <div class="card" style="background: var(--gray-50); border-style: dashed;">
+    <div style="font-size: 9px; font-weight: 800; color: var(--orange); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px;">/// How it works</div>
+    <div style="font-size: 13px; line-height: 1.65; color: var(--gray-700); font-weight: 500;">
+      <b style="color: var(--ink);">1.</b> Anyone authorised raises a request with item, project, urgency &amp; vendor quotes. &nbsp;
+      <b style="color: var(--ink);">2.</b> Below ₹10,000 → straight to Purchase. Above → GM approval first. &nbsp;
+      <b style="color: var(--ink);">3.</b> Purchase head sees a priority-sorted queue, picks best vendor, marks status. &nbsp;
+      <b style="color: var(--ink);">4.</b> Director sees live spend by project &amp; department, day / week / month.
+    </div>
+  </div>
+</section>
+
+<!-- ================ NEW REQUEST ================ -->
+<section class="screen" id="screen-request">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>New Purchase Request</h2>
+    <span class="sub">Form</span>
+  </div>
+
+  <div class="intro-strip">
+    Fill once, route automatically. <b>Below ₹10,000</b> goes straight to the Purchase queue. <b>Above ₹10,000</b> is held for GM approval first.
+  </div>
+
+  <form class="card" id="requestForm" onsubmit="submitRequest(event)">
+    <div class="form-group">
+      <label>Requested By <span class="req">*</span></label>
+      <select id="reqBy" required>
+        <option value="">— Select —</option>
+        <option>Director / CEO</option>
+        <option>General Manager</option>
+        <option>Production Head</option>
+        <option>R&amp;D Head</option>
+        <option>Admin Head</option>
+        <option>Maintenance Head</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Item / Material Description <span class="req">*</span></label>
+      <textarea id="reqItem" placeholder="e.g. MS plate 12mm, 1220×2440, IS 2062 grade — 2 nos" required></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Quantity <span class="req">*</span></label>
+        <input type="text" id="reqQty" placeholder="e.g. 2 nos / 50 kg" required />
+      </div>
+      <div class="form-group">
+        <label>Est. Amount (₹) <span class="req">*</span></label>
+        <input type="number" id="reqAmt" placeholder="0" min="0" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Project / Cost Centre <span class="req">*</span></label>
+      <select id="reqProject" required>
+        <option value="">— Select Project —</option>
+        <option>Hydraulic Rock Splitters (Production)</option>
+        <option>Rescue Equipment (Production)</option>
+        <option>R&amp;D / Prototyping</option>
+        <option>Client / Custom Project</option>
+        <option>Factory Maintenance</option>
+        <option>Admin / Office</option>
+        <option>Personal — Director&apos;s Project</option>
+      </select>
+      <p class="help-text">Drives the project expense ledger — tag accurately.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Project / Job Reference</label>
+      <input type="text" id="reqRef" placeholder="e.g. RS-024 / Client name / WO number" />
+    </div>
+
+    <div class="form-group">
+      <label>Urgency <span class="req">*</span></label>
+      <div class="urgency-row" id="urgencyRow">
+        <button type="button" class="urg-chip" data-level="critical" onclick="pickUrgency(this)">Critical<small>Same day</small></button>
+        <button type="button" class="urg-chip" data-level="high" onclick="pickUrgency(this)">High<small>2–3 days</small></button>
+        <button type="button" class="urg-chip active" data-level="medium" onclick="pickUrgency(this)">Medium<small>A week</small></button>
+        <button type="button" class="urg-chip" data-level="low" onclick="pickUrgency(this)">Low<small>A month</small></button>
+        <button type="button" class="urg-chip" data-level="planned" onclick="pickUrgency(this)">Planned<small>Later</small></button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Required By Date</label>
+      <input type="date" id="reqDate" />
+    </div>
+
+    <div class="form-group">
+      <label>Reason / Justification</label>
+      <textarea id="reqReason" placeholder="Why now? Stock low? Job-specific? Client deadline? Any context helps approval."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Vendor Quotes <span style="color: var(--gray-500); font-weight: 500;">(recommended)</span></label>
+      <p class="help-text" style="margin-bottom: 8px;">Add 2–3 known vendor rates so purchase team can pick best price faster.</p>
+      <div id="vendorList">
+        <div class="vendor-row">
+          <input type="text" placeholder="Vendor name" class="v-name" />
+          <input type="number" placeholder="Rate (₹)" class="v-rate" min="0" />
+          <button type="button" class="vendor-remove" onclick="removeVendor(this)" aria-label="Remove">×</button>
+        </div>
+      </div>
+      <button type="button" class="add-vendor-btn" onclick="addVendor()">+ Add Vendor</button>
+    </div>
+
+    <div class="form-group">
+      <label>Specifications / Dimensions / Notes</label>
+      <textarea id="reqSpec" placeholder="Material grade, size, model, brand preference, IS standard, etc."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Request →</button>
+  </form>
+</section>
+
+<!-- ================ PURCHASE QUEUE ================ -->
+<section class="screen" id="screen-queue">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Procurement Queue</h2>
+    <span class="sub" id="queueCount">0 active</span>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Critical</div>
+      <div class="kpi-value" id="kpiCrit" style="color: var(--crit);">0</div>
+      <div class="kpi-sub">Same-day action</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">High</div>
+      <div class="kpi-value" id="kpiHigh" style="color: var(--orange);">0</div>
+      <div class="kpi-sub">2–3 days</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">In Progress</div>
+      <div class="kpi-value" id="kpiInProg">0</div>
+      <div class="kpi-sub">Quoted / purchased</div>
+    </div>
+    <div class="kpi-card accent">
+      <div class="kpi-label">Pending Value</div>
+      <div class="kpi-value" id="kpiValue">₹0</div>
+      <div class="kpi-sub">Approved + open</div>
+    </div>
+  </div>
+
+  <div class="filter-bar" id="queueFilters">
+    <button class="filter-chip active" data-filter="active" onclick="filterQueue(this)">All Active</button>
+    <button class="filter-chip" data-filter="critical" onclick="filterQueue(this)">Critical</button>
+    <button class="filter-chip" data-filter="high" onclick="filterQueue(this)">High</button>
+    <button class="filter-chip" data-filter="medium" onclick="filterQueue(this)">Medium</button>
+    <button class="filter-chip" data-filter="low" onclick="filterQueue(this)">Low</button>
+    <button class="filter-chip" data-filter="pending_approval" onclick="filterQueue(this)">Awaiting Approval</button>
+    <button class="filter-chip" data-filter="approved" onclick="filterQueue(this)">Approved</button>
+    <button class="filter-chip" data-filter="purchased" onclick="filterQueue(this)">Purchased</button>
+    <button class="filter-chip" data-filter="delivered" onclick="filterQueue(this)">Delivered</button>
+  </div>
+
+  <div id="queueList"></div>
+</section>
+
+<!-- ================ APPROVER ================ -->
+<section class="screen" id="screen-approver">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Pending Approvals</h2>
+    <span class="sub">GM Sign-off</span>
+  </div>
+
+  <div class="intro-strip">
+    Requests above <b>₹10,000</b> need your approval before Purchase team acts. Below threshold goes straight to queue.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent">
+      <div class="kpi-label">Awaiting You</div>
+      <div class="kpi-value" id="kpiPending">0</div>
+      <div class="kpi-sub">Above ₹10,000</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Approved (Month)</div>
+      <div class="kpi-value" id="kpiApproved" style="color: var(--low);">0</div>
+      <div class="kpi-sub">This month</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Value</div>
+      <div class="kpi-value" id="kpiPendValue">₹0</div>
+      <div class="kpi-sub">Pending decisions</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Avg Wait</div>
+      <div class="kpi-value" id="kpiWait">0h</div>
+      <div class="kpi-sub">Since raised</div>
+    </div>
+  </div>
+
+  <div id="approvalList"></div>
+</section>
+
+<!-- ================ REPORTS ================ -->
+<section class="screen" id="screen-reports">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Executive Reports</h2>
+    <span class="sub" id="reportDate"></span>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-chip active" data-rng="day" onclick="setReportRange(this,'day')">Today</button>
+    <button class="filter-chip" data-rng="week" onclick="setReportRange(this,'week')">This Week</button>
+    <button class="filter-chip" data-rng="month" onclick="setReportRange(this,'month')">This Month</button>
+    <button class="filter-chip" data-rng="all" onclick="setReportRange(this,'all')">All Time</button>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Requests</div>
+      <div class="kpi-value" id="rpt-count">0</div>
+    </div>
+    <div class="kpi-card accent">
+      <div class="kpi-label">Total Spend</div>
+      <div class="kpi-value" id="rpt-spend">₹0</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Delivered</div>
+      <div class="kpi-value" id="rpt-delivered" style="color: var(--low);">0</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Open</div>
+      <div class="kpi-value" id="rpt-open" style="color: var(--orange);">0</div>
+    </div>
+  </div>
+
+  <div class="report-block">
+    <div class="report-header">
+      <h3>/// Spend by Project</h3>
+      <span class="date" id="rpt-range-1"></span>
+    </div>
+    <div class="report-body">
+      <table class="report-table" id="projectTable">
+        <thead><tr><th>Project</th><th class="num">Items</th><th class="num">Spend</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="report-block">
+    <div class="report-header">
+      <h3>/// Spend by Department</h3>
+      <span class="date" id="rpt-range-2"></span>
+    </div>
+    <div class="report-body">
+      <table class="report-table" id="deptTable">
+        <thead><tr><th>Requested By</th><th class="num">Items</th><th class="num">Spend</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="report-block">
+    <div class="report-header">
+      <h3>/// Spend by Urgency</h3>
+      <span class="date" id="rpt-range-4"></span>
+    </div>
+    <div class="report-body">
+      <table class="report-table" id="urgTable">
+        <thead><tr><th>Urgency</th><th class="num">Items</th><th class="num">Spend</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="report-block">
+    <div class="report-header">
+      <h3>/// Recent Activity</h3>
+      <span class="date" id="rpt-range-3"></span>
+    </div>
+    <div class="report-body">
+      <table class="report-table" id="activityTable">
+        <thead><tr><th>Date</th><th>Item</th><th>Project</th><th>Status</th><th class="num">₹</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 8px; margin-top: 14px;">
+    <button class="btn btn-primary" onclick="window.print()" style="flex:1;">Print / Export</button>
+    <button class="btn btn-ghost" onclick="exportCSV()" style="flex:1;">Download CSV</button>
+  </div>
+</section>
+
+<!-- ================ LEDGER ================ -->
+<section class="screen" id="screen-ledger">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Project Expense Ledger</h2>
+    <span class="sub">Per-project</span>
+  </div>
+
+  <div class="intro-strip">
+    Every purchase tagged to a project rolls up here — your live <b>per-project P&amp;L</b>.
+  </div>
+
+  <div class="project-tabs" id="projectTabs"></div>
+  <div id="ledgerView"></div>
+</section>
+
+<!-- ================ VENDOR DIRECTORY ================ -->
+<section class="screen" id="screen-vendors">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Vendor Directory</h2>
+    <span class="sub" id="vendorCount">0 vendors</span>
+  </div>
+
+  <div class="intro-strip">
+    Master list of approved vendors with standard rates. Tag each by <b>process</b>, <b>material</b>, and <b>project</b> — request form auto-suggests matching vendors.
+  </div>
+
+  <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+    <input type="search" id="vendorSearch" placeholder="Search vendors…" oninput="renderVendorMaster()" style="flex:1; padding: 10px 12px; border: 1.5px solid var(--gray-200); border-radius: 4px; font-size: 13px; font-family: 'Montserrat'; font-weight: 500;" />
+    <button class="btn btn-primary" onclick="openVendorEdit(null)" style="width: auto; padding: 10px 16px;">+ New</button>
+  </div>
+
+  <div class="filter-bar" id="vendorTagFilters"></div>
+  <div id="vendorMasterList"></div>
+</section>
+
+<!-- ================ SETTINGS ================ -->
+<section class="screen" id="screen-settings">
+  <button class="back-btn" onclick="goHome()">← BACK</button>
+  <div class="section-head">
+    <h2>Settings</h2>
+    <span class="sub">WhatsApp routing &amp; thresholds</span>
+  </div>
+
+  <div class="intro-strip">
+    Configure how requests get routed to GM, Director and Purchase Head via WhatsApp. Saved locally on this device.
+  </div>
+
+  <div class="card">
+    <div class="settings-section">
+      <h3>/// Approval Threshold</h3>
+      <div class="form-group">
+        <label>Auto-approve below (₹)</label>
+        <input type="number" id="setThreshold" min="0" />
+        <p class="help-text">Requests under this amount skip GM approval. Currently ₹10,000.</p>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>/// Routing Numbers</h3>
+      <p class="help-text" style="margin-bottom: 10px;">WhatsApp numbers in international format <b>without</b> + sign (e.g. <code style="background:var(--gray-100);padding:1px 4px;">919876543210</code>).</p>
+
+      <div class="form-group">
+        <label>Purchase Head (default recipient for all new requests)</label>
+        <input type="text" id="setWaPurchase" placeholder="e.g. 919876543210" />
+      </div>
+      <div class="form-group">
+        <label>General Manager</label>
+        <input type="text" id="setWaGm" placeholder="e.g. 919876543210" />
+      </div>
+      <div class="form-group">
+        <label>Director / CEO</label>
+        <input type="text" id="setWaDirector" placeholder="e.g. 919876543210" />
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h3>/// Routing Rules</h3>
+      <p class="help-text" style="margin-bottom: 10px;">Decide who approves what. Rules check top to bottom.</p>
+
+      <div class="form-group">
+        <label>Personal projects → Director</label>
+        <select id="setRoutePersonal">
+          <option value="director">Yes — always notify Director</option>
+          <option value="gm">No — go through GM</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Big purchases (above ₹) → Director</label>
+        <input type="number" id="setRouteBigAmt" placeholder="e.g. 100000" />
+        <p class="help-text">Above this, request also notifies Director, not just GM.</p>
+      </div>
+      <div class="form-group">
+        <label>Critical urgency → notify everyone</label>
+        <select id="setRouteCritical">
+          <option value="all">Yes — Purchase + GM + Director</option>
+          <option value="gm">Just GM</option>
+          <option value="purchase">Just Purchase</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+  </div>
+
+  <div class="card" style="background: var(--gray-50); border-style: dashed;">
+    <div style="font-size: 9px; font-weight: 800; color: var(--orange); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px;">/// Data tools</div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <button class="btn btn-ghost" onclick="exportAllJson()" style="flex:1; min-width: 140px;">Export Data</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('jsonImport').click()" style="flex:1; min-width: 140px;">Import Data</button>
+      <button class="btn btn-danger" onclick="resetAll()" style="flex:1; min-width: 140px;">Reset All</button>
+    </div>
+    <input type="file" id="jsonImport" accept="application/json" style="display:none" onchange="importJson(event)" />
+    <p class="help-text" style="margin-top: 10px;">Backup or restore all requests, vendors and settings as JSON.</p>
+  </div>
+</section>
+
+<!-- ================ VENDOR EDIT MODAL ================ -->
+<div class="modal-overlay" id="vendorModal" onclick="if(event.target===this)closeVendorModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="vendorModalTitle">New Vendor</h3>
+      <button class="modal-close" onclick="closeVendorModal()" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <form id="vendorForm" onsubmit="saveVendor(event)">
+        <input type="hidden" id="vmId" />
+
+        <div class="form-group">
+          <label>Vendor Name <span class="req">*</span></label>
+          <input type="text" id="vmName" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Contact Person</label>
+            <input type="text" id="vmContact" />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" id="vmPhone" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" id="vmCity" placeholder="e.g. Pune" />
+          </div>
+          <div class="form-group">
+            <label>GST Number</label>
+            <input type="text" id="vmGst" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="vmEmail" />
+        </div>
+
+        <div class="form-group">
+          <label>Process Tags</label>
+          <p class="help-text" style="margin-bottom: 4px;">Manufacturing processes this vendor handles.</p>
+          <div class="tag-picker" id="tagsProcess"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Material Tags</label>
+          <p class="help-text" style="margin-bottom: 4px;">Material categories this vendor supplies.</p>
+          <div class="tag-picker" id="tagsMaterial"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Project Tags</label>
+          <p class="help-text" style="margin-bottom: 4px;">Projects where this vendor is approved.</p>
+          <div class="tag-picker" id="tagsProject"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Standard Rates / Operational Cost</label>
+          <textarea id="vmRates" placeholder="e.g. MS plate 12mm — ₹62/kg&#10;Welding labour — ₹450/hr&#10;Machining — ₹85/hr"></textarea>
+          <p class="help-text">One rate per line. Used for quick reference when raising requests.</p>
+        </div>
+
+        <div class="form-group">
+          <label>Reliability Rating</label>
+          <select id="vmRating">
+            <option value="A">A — Preferred (top quality, on-time)</option>
+            <option value="B">B — Approved (regular use)</option>
+            <option value="C">C — Backup (use when needed)</option>
+            <option value="N">New — Under evaluation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="vmNotes" placeholder="Payment terms, delivery time, anything else worth noting"></textarea>
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <button type="submit" class="btn btn-primary" style="flex:2;">Save Vendor</button>
+          <button type="button" class="btn btn-danger" id="vmDeleteBtn" style="flex:1; display:none;" onclick="deleteVendor()">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ================ FILE PREVIEW MODAL ================ -->
+<div class="modal-overlay" id="previewModal" onclick="if(event.target===this)closePreviewModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="previewTitle">Attachment</h3>
+      <button class="modal-close" onclick="closePreviewModal()" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="previewBody"></div>
+  </div>
+</div>
+
+
+<!-- ================ MODAL ================ -->
+<div class="modal-overlay" id="detailModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Request Detail</h3>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Saved</div>
+
+<!-- ================ FOOTER NAV ================ -->
+<nav class="footer-nav" id="footerNav" style="display:none;">
+  <button class="nav-btn" id="nav-request" onclick="navTo('request')"><span class="ico">📝</span>Request</button>
+  <button class="nav-btn" id="nav-queue" onclick="navTo('queue')"><span class="ico">📦</span>Queue</button>
+  <button class="nav-btn" id="nav-approver" onclick="navTo('approver')"><span class="ico">✅</span>Approve</button>
+  <button class="nav-btn" id="nav-vendors" onclick="navTo('vendors')"><span class="ico">🏭</span>Vendors</button>
+  <button class="nav-btn" id="nav-reports" onclick="navTo('reports')"><span class="ico">📊</span>Reports</button>
+  <button class="nav-btn" id="nav-ledger" onclick="navTo('ledger')"><span class="ico">📋</span>Ledger</button>
+  <button class="nav-btn" id="nav-settings" onclick="navTo('settings')"><span class="ico">⚙️</span>Settings</button>
+</nav>
+
+<script>
+/* ============================================================
+   SMART — PURCHASE DEPT REPORTING SYSTEM
+   State: in-memory + localStorage
+   Backend hook: replace save()/load() with Apps Script fetch
+   ============================================================ */
+const STORAGE_KEY = 'smart_purchase_v1';
+const APPROVAL_THRESHOLD = 10000;
+const URG_RANK = { critical: 1, high: 2, medium: 3, low: 4, planned: 5 };
+const PROJECTS = [
+  'Hydraulic Rock Splitters (Production)',
+  'Rescue Equipment (Production)',
+  'R&D / Prototyping',
+  'Client / Custom Project',
+  'Factory Maintenance',
+  'Admin / Office',
+  "Personal — Director's Project"
+];
+const STATUS_LABEL = {
+  pending_approval: 'Awaiting Approval',
+  approved: 'Approved',
+  quoted: 'Vendor Quoted',
+  purchased: 'Purchased',
+  delivered: 'Delivered',
+  rejected: 'Rejected',
+  cancelled: 'Cancelled'
+};
+
+let state = {
+  requests: [],
+  currentRole: null,
+  currentUrgency: 'medium',
+  queueFilter: 'active',
+  reportRange: 'month',
+  ledgerProject: null
+};
+
+/* ===== SEED DATA ===== */
+function seedData() {
+  const now = Date.now();
+  const D = 86400000;
+  return [
+    { id:'PR-2026-0124', requester:'Production Head', item:'MS plate 12mm IS-2062, 1220×2440', qty:'4 nos', amount:48000, project:'Hydraulic Rock Splitters (Production)', ref:'RS-024 batch', urgency:'high', requiredBy:'2026-04-30', reason:'Stock for upcoming RS-32 build batch', vendors:[{name:'Bharat Steel', rate:11800},{name:'Tata Smartfab', rate:12200},{name:'Local Pune Stockist', rate:12000}], spec:'Hot-rolled, mill test cert', status:'pending_approval', createdAt: now - D*1, history:[{at:now-D, by:'Production Head', note:'Request raised'}] },
+    { id:'PR-2026-0125', requester:'R&D Head', item:'Hydraulic seal kit 2.5T', qty:'6 sets', amount:8400, project:'R&D / Prototyping', ref:'PROTO-RB-V3', urgency:'critical', requiredBy:'2026-04-27', reason:'Prototype testing tomorrow morning', vendors:[{name:'Hydroseal India', rate:1400}], spec:'NBR rubber, ID 32mm', status:'approved', createdAt: now - D*0.5, history:[{at:now-D*0.5, by:'R&D Head', note:'Request raised'},{at:now-D*0.4, by:'System', note:'Auto-approved (below ₹10,000)'}] },
+    { id:'PR-2026-0126', requester:'Director / CEO', item:'Italian marble flooring sample', qty:'5 sqft', amount:18500, project:"Personal — Director's Project", ref:'Home reno', urgency:'medium', requiredBy:'2026-05-05', reason:'Sample for selection', vendors:[], spec:'Carrara white preferred', status:'pending_approval', createdAt: now - D*2, history:[{at:now-D*2, by:'Director / CEO', note:'Request raised'}] },
+    { id:'PR-2026-0127', requester:'Maintenance Head', item:'Lathe machine V-belt B-72', qty:'4 nos', amount:1600, project:'Factory Maintenance', ref:'Lathe #2', urgency:'high', requiredBy:'2026-04-28', reason:'Existing belt worn — downtime risk', vendors:[{name:'Fenner Pune', rate:380},{name:'Local hardware', rate:420}], spec:'B-section, 72" length', status:'approved', createdAt: now - D*0.3, history:[{at:now-D*0.3, by:'Maintenance Head', note:'Request raised'},{at:now-D*0.25, by:'System', note:'Auto-approved (below ₹10,000)'}] },
+    { id:'PR-2026-0128', requester:'Production Head', item:'Hydraulic hose 3/8" wire-braided, 5m', qty:'10 m', amount:4500, project:'Hydraulic Rock Splitters (Production)', ref:'RS-024 batch', urgency:'high', requiredBy:'2026-04-29', reason:'For final assembly', vendors:[{name:'Parker India', rate:480},{name:'Eaton dealer', rate:450}], spec:'700 bar working pressure', status:'purchased', createdAt: now - D*3, history:[{at:now-D*3, by:'Production Head', note:'Request raised'},{at:now-D*2.9, by:'System', note:'Auto-approved'},{at:now-D*1, by:'Purchase Head', note:'PO placed with Eaton dealer @ ₹450/m'}] },
+    { id:'PR-2026-0129', requester:'Admin Head', item:'A4 printing paper, 75 GSM', qty:'10 reams', amount:3200, project:'Admin / Office', ref:'Office stock', urgency:'low', requiredBy:'2026-05-15', reason:'Monthly office stock', vendors:[{name:'JK Paper dealer', rate:320}], spec:'JK Copier or equivalent', status:'delivered', createdAt: now - D*7, history:[{at:now-D*7, by:'Admin Head', note:'Request raised'},{at:now-D*6.9, by:'System', note:'Auto-approved'},{at:now-D*5, by:'Purchase Head', note:'PO placed'},{at:now-D*3, by:'Purchase Head', note:'Delivered & invoiced'}] },
+    { id:'PR-2026-0130', requester:'R&D Head', item:'Pressure transducer 0-700 bar', qty:'2 nos', amount:24000, project:'R&D / Prototyping', ref:'PROTO-RB-V3', urgency:'medium', requiredBy:'2026-05-08', reason:'Data logging for prototype testing', vendors:[{name:'WIKA India', rate:13500},{name:'Honeywell distributor', rate:11800},{name:'Endress dealer', rate:14200}], spec:'4-20mA output, IP65', status:'pending_approval', createdAt: now - D*0.8, history:[{at:now-D*0.8, by:'R&D Head', note:'Request raised'}] },
+    { id:'PR-2026-0131', requester:'Production Head', item:'CO2 welding wire 1.2mm', qty:'4 reels (15kg ea)', amount:9600, project:'Rescue Equipment (Production)', ref:'RES-12 batch', urgency:'medium', requiredBy:'2026-05-02', reason:'Production consumable', vendors:[{name:'ESAB dealer', rate:160},{name:'Ador Welding', rate:155}], spec:'ER70S-6, copper coated', status:'approved', createdAt: now - D*1.5, history:[{at:now-D*1.5, by:'Production Head', note:'Request raised'},{at:now-D*1.4, by:'System', note:'Auto-approved (below ₹10,000)'}] }
+  ];
+}
+
+/* ===== PERSISTENCE ===== */
+function save() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.requests)); } catch(e){}
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      state.requests = JSON.parse(raw);
+      return;
+    }
+  } catch(e){}
+  state.requests = seedData();
+  save();
+}
+
+/* ===== UTILITIES ===== */
+function inr(n) {
+  if (n == null || isNaN(n)) return '₹0';
+  return '₹' + Number(n).toLocaleString('en-IN');
+}
+function shortInr(n) {
+  if (n >= 10000000) return '₹' + (n/10000000).toFixed(1) + 'Cr';
+  if (n >= 100000) return '₹' + (n/100000).toFixed(1) + 'L';
+  if (n >= 1000) return '₹' + (n/1000).toFixed(0) + 'K';
+  return inr(n);
+}
+function fmtDate(ts) {
+  const d = new Date(ts);
+  return d.toLocaleDateString('en-IN', { day:'2-digit', month:'short' });
+}
+function fmtDateTime(ts) {
+  const d = new Date(ts);
+  return d.toLocaleString('en-IN', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+}
+function ago(ts) {
+  const diff = Date.now() - ts;
+  const h = Math.floor(diff/3600000);
+  if (h < 1) return Math.floor(diff/60000) + 'm ago';
+  if (h < 24) return h + 'h ago';
+  return Math.floor(h/24) + 'd ago';
+}
+function newId() {
+  const year = new Date().getFullYear();
+  const max = state.requests.reduce((m,r) => {
+    const n = parseInt((r.id.split('-')[2]||'0'));
+    return Math.max(m, n);
+  }, 0);
+  return 'PR-' + year + '-' + String(max+1).padStart(4,'0');
+}
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ===== NAVIGATION ===== */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const nav = document.getElementById('nav-' + id);
+  if (nav) nav.classList.add('active');
+  window.scrollTo(0,0);
+}
+function goHome() {
+  state.currentRole = null;
+  document.getElementById('footerNav').style.display = 'none';
+  document.getElementById('roleSwitch').style.display = 'none';
+  showScreen('home');
+}
+function setRole(role) {
+  state.currentRole = role;
+  document.getElementById('footerNav').style.display = 'flex';
+  document.getElementById('roleSwitch').style.display = 'inline-block';
+  // route to default screen for role
+  const map = { requester: 'request', purchase: 'queue', approver: 'approver', director: 'reports' };
+  navTo(map[role] || 'queue');
+}
+function navTo(screen) {
+  if (screen === 'queue') renderQueue();
+  if (screen === 'approver') renderApprovals();
+  if (screen === 'reports') renderReports();
+  if (screen === 'ledger') renderLedger();
+  if (screen === 'request') resetForm();
+  if (screen === 'vendors') renderVendorMaster();
+  if (screen === 'settings') renderSettings();
+  showScreen(screen);
+}
+
+/* ===== FORM HANDLERS ===== */
+function pickUrgency(btn) {
+  document.querySelectorAll('#urgencyRow .urg-chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.currentUrgency = btn.dataset.level;
+}
+function addVendor() {
+  const list = document.getElementById('vendorList');
+  const row = document.createElement('div');
+  row.className = 'vendor-row';
+  row.innerHTML = '<input type="text" placeholder="Vendor name" class="v-name" /><input type="number" placeholder="Rate (₹)" class="v-rate" min="0" /><button type="button" class="vendor-remove" onclick="removeVendor(this)" aria-label="Remove">×</button>';
+  list.appendChild(row);
+}
+function removeVendor(btn) {
+  const list = document.getElementById('vendorList');
+  if (list.children.length > 1) btn.parentElement.remove();
+  else { btn.parentElement.querySelector('.v-name').value = ''; btn.parentElement.querySelector('.v-rate').value = ''; }
+}
+function resetForm() {
+  const f = document.getElementById('requestForm');
+  if (f) f.reset();
+  state.currentUrgency = 'medium';
+  document.querySelectorAll('#urgencyRow .urg-chip').forEach(b => {
+    b.classList.toggle('active', b.dataset.level === 'medium');
+  });
+  const list = document.getElementById('vendorList');
+  if (list) list.innerHTML = '<div class="vendor-row"><input type="text" placeholder="Vendor name" class="v-name" /><input type="number" placeholder="Rate (₹)" class="v-rate" min="0" /><button type="button" class="vendor-remove" onclick="removeVendor(this)" aria-label="Remove">×</button></div>';
+}
+function submitRequest(ev) {
+  ev.preventDefault();
+  const vendors = [];
+  document.querySelectorAll('#vendorList .vendor-row').forEach(r => {
+    const name = r.querySelector('.v-name').value.trim();
+    const rate = r.querySelector('.v-rate').value;
+    if (name && rate) vendors.push({ name, rate: Number(rate) });
+  });
+  const amt = Number(document.getElementById('reqAmt').value);
+  const requester = document.getElementById('reqBy').value;
+  const threshold = (state.settings && state.settings.threshold) || APPROVAL_THRESHOLD;
+  const autoApprove = amt < threshold;
+  const now = Date.now();
+  const r = {
+    id: newId(),
+    requester,
+    item: document.getElementById('reqItem').value.trim(),
+    qty: document.getElementById('reqQty').value.trim(),
+    amount: amt,
+    project: document.getElementById('reqProject').value,
+    ref: document.getElementById('reqRef').value.trim(),
+    urgency: state.currentUrgency,
+    requiredBy: document.getElementById('reqDate').value,
+    reason: document.getElementById('reqReason').value.trim(),
+    vendors,
+    spec: document.getElementById('reqSpec').value.trim(),
+    attachments: [],
+    status: autoApprove ? 'approved' : 'pending_approval',
+    createdAt: now,
+    history: [{ at: now, by: requester, note: 'Request raised' }]
+  };
+  if (autoApprove) {
+    r.history.push({ at: now+1, by: 'System', note: 'Auto-approved (below ₹' + threshold.toLocaleString('en-IN') + ')' });
+  }
+  state.requests.unshift(r);
+  save();
+  toast(autoApprove ? 'Submitted → Purchase Queue' : 'Submitted → GM Approval');
+  resetForm();
+
+  // Open WhatsApp routing for configured recipients
+  setTimeout(() => {
+    const recipients = getRecipientsFor(r);
+    if (recipients.length === 0) {
+      if (confirm('Request ' + r.id + ' saved.\n\nNo WhatsApp recipients configured. Open Settings now?')) {
+        navTo('settings');
+      }
+      return;
+    }
+    const names = recipients.map(x => x.role).join(', ');
+    if (confirm('Request ' + r.id + ' saved.\n\nNotify ' + names + ' on WhatsApp?')) {
+      notifyOnWhatsApp(r.id);
+    }
+  }, 250);
+}
+function buildWhatsAppMessage(r) {
+  return [
+    '*SMART — New Purchase Request*',
+    '',
+    'ID: ' + r.id,
+    'By: ' + r.requester,
+    'Item: ' + r.item,
+    'Qty: ' + r.qty,
+    'Est: ' + inr(r.amount),
+    'Project: ' + r.project + (r.ref ? ' / ' + r.ref : ''),
+    'Urgency: ' + r.urgency.toUpperCase() + (r.requiredBy ? ' (by ' + r.requiredBy + ')' : ''),
+    'Status: ' + STATUS_LABEL[r.status],
+    r.reason ? '\nReason: ' + r.reason : ''
+  ].join('\n');
+}
+
+/* ===== QUEUE ===== */
+function filterQueue(btn) {
+  document.querySelectorAll('#queueFilters .filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  state.queueFilter = btn.dataset.filter;
+  renderQueue();
+}
+function renderQueue() {
+  const list = document.getElementById('queueList');
+  const filter = state.queueFilter;
+  let items = state.requests.slice();
+
+  if (filter === 'active') {
+    items = items.filter(r => !['delivered','rejected','cancelled'].includes(r.status));
+  } else if (['critical','high','medium','low','planned'].includes(filter)) {
+    items = items.filter(r => r.urgency === filter && !['delivered','rejected','cancelled'].includes(r.status));
+  } else {
+    items = items.filter(r => r.status === filter);
+  }
+
+  // sort by urgency, then by createdAt asc (oldest first within same urgency)
+  items.sort((a,b) => {
+    const ur = (URG_RANK[a.urgency]||9) - (URG_RANK[b.urgency]||9);
+    if (ur !== 0) return ur;
+    return a.createdAt - b.createdAt;
+  });
+
+  // KPIs
+  const active = state.requests.filter(r => !['delivered','rejected','cancelled'].includes(r.status));
+  document.getElementById('kpiCrit').textContent = active.filter(r => r.urgency === 'critical').length;
+  document.getElementById('kpiHigh').textContent = active.filter(r => r.urgency === 'high').length;
+  document.getElementById('kpiInProg').textContent = state.requests.filter(r => ['quoted','purchased'].includes(r.status)).length;
+  const pendVal = active.filter(r => r.status === 'approved' || r.status === 'quoted' || r.status === 'purchased').reduce((s,r) => s + (r.amount||0), 0);
+  document.getElementById('kpiValue').textContent = shortInr(pendVal);
+  document.getElementById('queueCount').textContent = items.length + ' shown';
+
+  if (items.length === 0) {
+    list.innerHTML = '<div class="empty-state"><div class="ico">📦</div><b>Queue is clear</b>No requests match this filter.</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(r => requestCardHtml(r, 'purchase')).join('');
+}
+
+function requestCardHtml(r, mode) {
+  const urgClass = 'urg-' + r.urgency;
+  const bestVendor = r.vendors && r.vendors.length ? r.vendors.reduce((b,v) => v.rate < b.rate ? v : b, r.vendors[0]) : null;
+  let actions = '';
+  if (mode === 'purchase') {
+    if (r.status === 'approved') actions += '<button class="btn btn-black" onclick="event.stopPropagation();updateStatus(\'' + r.id + '\',\'quoted\')">Mark Quoted</button>';
+    if (r.status === 'approved' || r.status === 'quoted') actions += '<button class="btn btn-primary" onclick="event.stopPropagation();updateStatus(\'' + r.id + '\',\'purchased\')">Mark Purchased</button>';
+    if (r.status === 'purchased') actions += '<button class="btn btn-success" onclick="event.stopPropagation();updateStatus(\'' + r.id + '\',\'delivered\')">Delivered ✓</button>';
+    if (r.status === 'pending_approval') actions += '<button class="btn btn-ghost" disabled style="opacity:0.6;">Awaiting GM</button>';
+  } else if (mode === 'approver' && r.status === 'pending_approval') {
+    actions = '<button class="btn btn-success" onclick="event.stopPropagation();updateStatus(\'' + r.id + '\',\'approved\')">Approve ✓</button><button class="btn btn-danger" onclick="event.stopPropagation();updateStatus(\'' + r.id + '\',\'rejected\')">Reject ✗</button>';
+  }
+
+  return `
+    <div class="request-card ${urgClass}" onclick="openDetail('${r.id}')">
+      <div class="req-id">${r.id} · ${ago(r.createdAt)}</div>
+      <div class="req-top">
+        <div style="flex:1; min-width:0;">
+          <div class="req-title">${escapeHtml(r.item)}</div>
+          <div class="req-meta">
+            <span><b>${escapeHtml(r.qty)}</b></span>
+            <span>${inr(r.amount)}</span>
+            <span>${escapeHtml(r.requester)}</span>
+          </div>
+          <div class="req-meta" style="margin-bottom:0;">
+            <span style="color:var(--orange-dark); font-weight:700;">${escapeHtml(r.project)}${r.ref ? ' · ' + escapeHtml(r.ref) : ''}</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px; align-items:flex-end;">
+          <span class="badge badge-${r.urgency}">${r.urgency}</span>
+          <span class="badge badge-${r.status}">${STATUS_LABEL[r.status]}</span>
+        </div>
+      </div>
+      ${bestVendor ? '<div style="font-size:11px; color:var(--gray-500); margin-top:6px; font-weight:500;">Best quote: <b style="color:var(--low);">' + escapeHtml(bestVendor.name) + ' · ₹' + bestVendor.rate.toLocaleString('en-IN') + '</b>' + (r.vendors.length > 1 ? ' (' + r.vendors.length + ' quotes)' : '') + '</div>' : ''}
+      ${actions ? '<div class="req-actions">' + actions + '</div>' : ''}
+    </div>`;
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ===== APPROVALS ===== */
+function renderApprovals() {
+  const list = document.getElementById('approvalList');
+  const pending = state.requests.filter(r => r.status === 'pending_approval');
+  pending.sort((a,b) => (URG_RANK[a.urgency]||9) - (URG_RANK[b.urgency]||9) || a.createdAt - b.createdAt);
+
+  document.getElementById('kpiPending').textContent = pending.length;
+  const monthStart = new Date(); monthStart.setDate(1); monthStart.setHours(0,0,0,0);
+  const monthApproved = state.requests.filter(r => {
+    return r.history && r.history.some(h => h.note.toLowerCase().includes('approved') && h.at >= monthStart.getTime());
+  }).length;
+  document.getElementById('kpiApproved').textContent = monthApproved;
+  document.getElementById('kpiPendValue').textContent = shortInr(pending.reduce((s,r) => s+(r.amount||0), 0));
+  if (pending.length) {
+    const avgH = pending.reduce((s,r) => s + (Date.now()-r.createdAt), 0) / pending.length / 3600000;
+    document.getElementById('kpiWait').textContent = avgH < 24 ? Math.round(avgH) + 'h' : Math.round(avgH/24) + 'd';
+  } else {
+    document.getElementById('kpiWait').textContent = '—';
+  }
+
+  if (pending.length === 0) {
+    list.innerHTML = '<div class="empty-state"><div class="ico">✓</div><b>All clear</b>No pending approvals right now.</div>';
+    return;
+  }
+  list.innerHTML = pending.map(r => requestCardHtml(r, 'approver')).join('');
+}
+
+/* ===== STATUS UPDATES ===== */
+function updateStatus(id, newStatus) {
+  const r = state.requests.find(x => x.id === id);
+  if (!r) return;
+  const by = state.currentRole === 'approver' ? 'GM' : (state.currentRole === 'purchase' ? 'Purchase Head' : 'User');
+  r.status = newStatus;
+  r.history.push({ at: Date.now(), by, note: 'Status → ' + STATUS_LABEL[newStatus] });
+  save();
+  toast(STATUS_LABEL[newStatus]);
+  // refresh whichever screen
+  if (document.getElementById('screen-queue').classList.contains('active')) renderQueue();
+  if (document.getElementById('screen-approver').classList.contains('active')) renderApprovals();
+  closeModal();
+}
+
+/* ===== DETAIL MODAL ===== */
+function openDetail(id) {
+  const r = state.requests.find(x => x.id === id);
+  if (!r) return;
+  document.getElementById('modalTitle').textContent = r.id;
+  const best = r.vendors && r.vendors.length ? r.vendors.reduce((b,v) => v.rate < b.rate ? v : b, r.vendors[0]) : null;
+  let vendorHtml = '<span style="color:var(--gray-500);">No vendor quotes recorded</span>';
+  if (r.vendors && r.vendors.length) {
+    vendorHtml = '<div class="vendor-list-mini">' +
+      r.vendors.map(v => '<div class="v-row' + (v === best ? ' best' : '') + '"><span>' + escapeHtml(v.name) + '</span><span>₹' + v.rate.toLocaleString('en-IN') + '</span></div>').join('') +
+      '</div>';
+  }
+  let timelineHtml = '<ul class="timeline">' +
+    r.history.map(h => '<li><b>' + escapeHtml(h.note) + '</b> — ' + escapeHtml(h.by) + '<div class="when">' + fmtDateTime(h.at) + '</div></li>').join('') +
+    '</ul>';
+
+  let statusActions = '';
+  if (state.currentRole === 'approver' && r.status === 'pending_approval') {
+    statusActions = '<div style="display:flex;gap:6px;margin-top:14px;"><button class="btn btn-success" onclick="updateStatus(\'' + r.id + '\',\'approved\')" style="flex:1;">Approve ✓</button><button class="btn btn-danger" onclick="updateStatus(\'' + r.id + '\',\'rejected\')" style="flex:1;">Reject</button></div>';
+  } else if (state.currentRole === 'purchase') {
+    let buttons = [];
+    if (r.status === 'approved') buttons.push('<button class="btn btn-black" onclick="updateStatus(\'' + r.id + '\',\'quoted\')" style="flex:1;">Mark Quoted</button>');
+    if (r.status === 'approved' || r.status === 'quoted') buttons.push('<button class="btn btn-primary" onclick="updateStatus(\'' + r.id + '\',\'purchased\')" style="flex:1;">Mark Purchased</button>');
+    if (r.status === 'purchased') buttons.push('<button class="btn btn-success" onclick="updateStatus(\'' + r.id + '\',\'delivered\')" style="flex:1;">Mark Delivered</button>');
+    if (buttons.length) statusActions = '<div style="display:flex;gap:6px;margin-top:14px;flex-wrap:wrap;">' + buttons.join('') + '</div>';
+  }
+
+  document.getElementById('modalBody').innerHTML = `
+    <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;">
+      <span class="badge badge-${r.urgency}">${r.urgency}</span>
+      <span class="badge badge-${r.status}">${STATUS_LABEL[r.status]}</span>
+    </div>
+    <div class="detail-row"><div class="lab">Item</div><div class="val">${escapeHtml(r.item)}</div></div>
+    <div class="detail-row"><div class="lab">Quantity</div><div class="val">${escapeHtml(r.qty)}</div></div>
+    <div class="detail-row"><div class="lab">Est. Amount</div><div class="val"><b>${inr(r.amount)}</b></div></div>
+    <div class="detail-row"><div class="lab">Project</div><div class="val">${escapeHtml(r.project)}${r.ref ? '<br/><span style="color:var(--gray-500);font-size:11px;">' + escapeHtml(r.ref) + '</span>' : ''}</div></div>
+    <div class="detail-row"><div class="lab">Requester</div><div class="val">${escapeHtml(r.requester)}</div></div>
+    <div class="detail-row"><div class="lab">Required</div><div class="val">${r.requiredBy || '<span style="color:var(--gray-500);">—</span>'}</div></div>
+    ${r.reason ? '<div class="detail-row"><div class="lab">Reason</div><div class="val">' + escapeHtml(r.reason) + '</div></div>' : ''}
+    ${r.spec ? '<div class="detail-row"><div class="lab">Specs</div><div class="val">' + escapeHtml(r.spec) + '</div></div>' : ''}
+    <div class="detail-row"><div class="lab">Vendors</div><div class="val">${vendorHtml}</div></div>
+    <div class="detail-row"><div class="lab">Timeline</div><div class="val">${timelineHtml}</div></div>
+    <div class="detail-row"><div class="lab">Documents</div><div class="val" id="attachmentsSlot">${renderAttachmentsSection(r)}</div></div>
+    ${statusActions}
+    <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--gray-100);">
+      <button class="btn btn-black" onclick="notifyOnWhatsApp('${r.id}')" style="width:100%;">📲 Send / Re-send on WhatsApp</button>
+    </div>
+  `;
+  document.getElementById('detailModal').classList.add('show');
+}
+function closeModal() {
+  document.getElementById('detailModal').classList.remove('show');
+}
+
+/* ===== REPORTS ===== */
+function setReportRange(btn, range) {
+  document.querySelectorAll('#screen-reports .filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  state.reportRange = range;
+  renderReports();
+}
+function rangeFilter(items) {
+  const now = Date.now();
+  const todayStart = new Date(); todayStart.setHours(0,0,0,0);
+  const weekStart = new Date(); weekStart.setDate(weekStart.getDate() - 6); weekStart.setHours(0,0,0,0);
+  const monthStart = new Date(); monthStart.setDate(1); monthStart.setHours(0,0,0,0);
+  const cutoff = state.reportRange === 'day' ? todayStart.getTime() :
+                 state.reportRange === 'week' ? weekStart.getTime() :
+                 state.reportRange === 'month' ? monthStart.getTime() : 0;
+  return items.filter(r => r.createdAt >= cutoff);
+}
+function renderReports() {
+  const items = rangeFilter(state.requests);
+  const labelMap = { day: 'Today', week: 'Last 7 days', month: 'This Month', all: 'All Time' };
+  const label = labelMap[state.reportRange];
+  ['rpt-range-1','rpt-range-2','rpt-range-3','rpt-range-4'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.textContent = label;
+  });
+  document.getElementById('reportDate').textContent = label.toUpperCase();
+
+  document.getElementById('rpt-count').textContent = items.length;
+  document.getElementById('rpt-spend').textContent = shortInr(items.reduce((s,r) => s+(r.amount||0), 0));
+  document.getElementById('rpt-delivered').textContent = items.filter(r => r.status === 'delivered').length;
+  document.getElementById('rpt-open').textContent = items.filter(r => !['delivered','rejected','cancelled'].includes(r.status)).length;
+
+  // Project table
+  const byProject = {};
+  items.forEach(r => {
+    if (!byProject[r.project]) byProject[r.project] = { count: 0, spend: 0 };
+    byProject[r.project].count++;
+    byProject[r.project].spend += (r.amount||0);
+  });
+  const projectRows = Object.entries(byProject).sort((a,b) => b[1].spend - a[1].spend);
+  const totalP = projectRows.reduce((s,[_,v]) => s + v.spend, 0);
+  const totalC = projectRows.reduce((s,[_,v]) => s + v.count, 0);
+  document.querySelector('#projectTable tbody').innerHTML = projectRows.length
+    ? projectRows.map(([p,v]) => `<tr><td>${escapeHtml(p)}</td><td class="num">${v.count}</td><td class="num">${inr(v.spend)}</td></tr>`).join('') +
+      `<tr><td><b>TOTAL</b></td><td class="num"><b>${totalC}</b></td><td class="num"><b>${inr(totalP)}</b></td></tr>`
+    : '<tr><td colspan="3" style="text-align:center;color:var(--gray-500);padding:18px;">No data for this period</td></tr>';
+
+  // Dept table
+  const byDept = {};
+  items.forEach(r => {
+    if (!byDept[r.requester]) byDept[r.requester] = { count: 0, spend: 0 };
+    byDept[r.requester].count++;
+    byDept[r.requester].spend += (r.amount||0);
+  });
+  const deptRows = Object.entries(byDept).sort((a,b) => b[1].spend - a[1].spend);
+  document.querySelector('#deptTable tbody').innerHTML = deptRows.length
+    ? deptRows.map(([d,v]) => `<tr><td>${escapeHtml(d)}</td><td class="num">${v.count}</td><td class="num">${inr(v.spend)}</td></tr>`).join('')
+    : '<tr><td colspan="3" style="text-align:center;color:var(--gray-500);padding:18px;">No data</td></tr>';
+
+  // Urgency table
+  const byUrg = {};
+  items.forEach(r => {
+    if (!byUrg[r.urgency]) byUrg[r.urgency] = { count: 0, spend: 0 };
+    byUrg[r.urgency].count++;
+    byUrg[r.urgency].spend += (r.amount||0);
+  });
+  const urgRows = Object.entries(byUrg).sort((a,b) => (URG_RANK[a[0]]||9) - (URG_RANK[b[0]]||9));
+  document.querySelector('#urgTable tbody').innerHTML = urgRows.length
+    ? urgRows.map(([u,v]) => `<tr><td><span class="badge badge-${u}">${u}</span></td><td class="num">${v.count}</td><td class="num">${inr(v.spend)}</td></tr>`).join('')
+    : '<tr><td colspan="3" style="text-align:center;color:var(--gray-500);padding:18px;">No data</td></tr>';
+
+  // Activity table — last 12
+  const recent = items.slice().sort((a,b) => b.createdAt - a.createdAt).slice(0,12);
+  document.querySelector('#activityTable tbody').innerHTML = recent.length
+    ? recent.map(r => `<tr><td>${fmtDate(r.createdAt)}</td><td>${escapeHtml(r.item.substring(0,40))}${r.item.length>40?'…':''}</td><td>${escapeHtml(r.project.split(' ')[0])}</td><td><span class="badge badge-${r.status}" style="font-size:8px;">${STATUS_LABEL[r.status]}</span></td><td class="num">${inr(r.amount)}</td></tr>`).join('')
+    : '<tr><td colspan="5" style="text-align:center;color:var(--gray-500);padding:18px;">No activity</td></tr>';
+}
+
+function exportCSV() {
+  const items = rangeFilter(state.requests);
+  const headers = ['ID','Date','Requester','Item','Qty','Amount','Project','Reference','Urgency','RequiredBy','Status','Vendors','Spec','Reason'];
+  const rows = items.map(r => [
+    r.id,
+    new Date(r.createdAt).toISOString().split('T')[0],
+    r.requester, r.item, r.qty, r.amount, r.project, r.ref || '',
+    r.urgency, r.requiredBy || '', r.status,
+    (r.vendors||[]).map(v => v.name + ':' + v.rate).join(' | '),
+    r.spec || '', r.reason || ''
+  ]);
+  const csv = [headers, ...rows].map(row => row.map(c => '"' + String(c).replace(/"/g,'""') + '"').join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'smart-purchase-' + state.reportRange + '-' + new Date().toISOString().split('T')[0] + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('CSV downloaded');
+}
+
+/* ===== LEDGER ===== */
+function renderLedger() {
+  const projects = PROJECTS.slice();
+  const tabsEl = document.getElementById('projectTabs');
+  if (!state.ledgerProject) state.ledgerProject = projects[0];
+  tabsEl.innerHTML = projects.map(p =>
+    '<button class="project-tab' + (p === state.ledgerProject ? ' active' : '') + '" onclick="selectProject(\'' + p.replace(/'/g, "\\'") + '\')">' + escapeHtml(p.split(' ')[0]) + (p.includes('(') ? ' ' + p.split('(')[1].replace(')','') : (p.includes('—') ? ' ' + p.split('—')[1].trim() : '')) + '</button>'
+  ).join('');
+  renderLedgerView();
+}
+function selectProject(p) {
+  state.ledgerProject = p;
+  renderLedger();
+}
+function renderLedgerView() {
+  const view = document.getElementById('ledgerView');
+  const p = state.ledgerProject;
+  const items = state.requests.filter(r => r.project === p);
+  const total = items.reduce((s,r) => s + (r.amount||0), 0);
+  const delivered = items.filter(r => r.status === 'delivered').reduce((s,r) => s + (r.amount||0), 0);
+  const open = items.filter(r => !['delivered','rejected','cancelled'].includes(r.status)).reduce((s,r) => s + (r.amount||0), 0);
+
+  let summary = `
+    <div class="ledger-summary">
+      <div class="label">/// Total Project Spend</div>
+      <div class="total">${inr(total)}</div>
+      <div class="project-name">${escapeHtml(p)}</div>
+      <div class="breakdown">
+        <div>Items<span class="num">${items.length}</span></div>
+        <div>Delivered<span class="num">${shortInr(delivered)}</span></div>
+        <div>Open<span class="num">${shortInr(open)}</span></div>
+      </div>
+    </div>
+  `;
+
+  if (items.length === 0) {
+    view.innerHTML = summary + '<div class="empty-state"><div class="ico">📋</div><b>No purchases yet</b>Nothing recorded against this project.</div>';
+    return;
+  }
+
+  let table = '<div class="report-block"><div class="report-header"><h3>/// Expense Detail</h3><span class="date">' + items.length + ' line items</span></div><div class="report-body"><table class="report-table"><thead><tr><th>Date</th><th>Item</th><th>Qty</th><th>Vendor</th><th>Status</th><th class="num">₹</th></tr></thead><tbody>';
+  items.sort((a,b) => b.createdAt - a.createdAt);
+  items.forEach(r => {
+    const best = r.vendors && r.vendors.length ? r.vendors.reduce((b,v) => v.rate < b.rate ? v : b, r.vendors[0]) : null;
+    table += `<tr><td>${fmtDate(r.createdAt)}</td><td><b>${escapeHtml(r.item.substring(0,40))}</b>${r.spec ? '<br/><span style="color:var(--gray-500);font-size:10px;">' + escapeHtml(r.spec.substring(0,60)) + '</span>' : ''}</td><td>${escapeHtml(r.qty)}</td><td>${best ? escapeHtml(best.name) : '<span style="color:var(--gray-400);">—</span>'}</td><td><span class="badge badge-${r.status}" style="font-size:8px;">${STATUS_LABEL[r.status]}</span></td><td class="num">${inr(r.amount)}</td></tr>`;
+  });
+  table += `<tr><td colspan="5"><b>TOTAL</b></td><td class="num"><b>${inr(total)}</b></td></tr></tbody></table></div></div>`;
+
+  view.innerHTML = summary + table;
+}
+
+/* ===== INIT ===== */
+load();
+
+
+/* ============== V2 EXTENSIONS ============== */
+/* ============================================================
+   V2 ADDITIONS — VENDOR MASTER, FILES, SETTINGS, ROUTING
+   ============================================================ */
+
+const VENDOR_KEY = 'smart_vendors_v1';
+const SETTINGS_KEY = 'smart_settings_v1';
+
+const PROCESS_TAGS = [
+  'Welding', 'Machining', 'Fabrication', 'Painting / Powder Coating',
+  'Heat Treatment', 'Plating / Galvanizing', 'CNC Cutting', 'Laser Cutting',
+  'Bending / Forming', 'Assembly', 'Casting', 'Rubber / Sealing'
+];
+const MATERIAL_TAGS = [
+  'MS / Steel', 'Stainless Steel', 'Aluminium', 'Hydraulics',
+  'Pneumatics', 'Electricals', 'Fasteners', 'Bearings & Seals',
+  'Consumables', 'Tools', 'Paints & Chemicals', 'Packaging'
+];
+// PROJECT_TAGS reuses PROJECTS from v1
+
+state.vendors = [];
+state.settings = {
+  threshold: 10000,
+  waPurchase: '',
+  waGm: '',
+  waDirector: '',
+  routePersonal: 'director',
+  routeBigAmt: 100000,
+  routeCritical: 'all'
+};
+state.vendorTagFilter = 'all';
+state.vendorFormTags = { process: [], material: [], project: [] };
+
+/* ===== VENDOR SEED ===== */
+function seedVendors() {
+  return [
+    { id:'V001', name:'Bharat Steel Pune', contact:'Mr. Patel', phone:'+91 98220 11111', city:'Pune', gst:'27AABCB1234A1Z5', email:'sales@bharatsteel.in', processTags:['CNC Cutting','Bending / Forming'], materialTags:['MS / Steel'], projectTags:['Hydraulic Rock Splitters (Production)','Rescue Equipment (Production)'], rates:'MS plate 12mm — ₹62/kg\nMS plate 6mm — ₹64/kg\nCutting charge — ₹8/kg', rating:'A', notes:'30-day credit. Reliable for bulk steel.' },
+    { id:'V002', name:'Hydroseal India', contact:'Sanjay K.', phone:'+91 99220 22222', city:'Mumbai', gst:'27AAACH5678B1Z2', email:'orders@hydroseal.in', processTags:['Rubber / Sealing'], materialTags:['Hydraulics','Bearings & Seals'], projectTags:['Hydraulic Rock Splitters (Production)','R&D / Prototyping'], rates:'NBR seal kit 2.5T — ₹1,400/set\nWiper seal 32mm — ₹180/nos', rating:'A', notes:'Same-day delivery in Pune.' },
+    { id:'V003', name:'Eaton Hydraulics Dealer', contact:'Rajesh M.', phone:'+91 97220 33333', city:'Pune', gst:'27AAECE9012C1Z9', email:'pune@eaton-dealer.in', processTags:[], materialTags:['Hydraulics'], projectTags:['Hydraulic Rock Splitters (Production)'], rates:'3/8" wire-braided hose — ₹450/m\n1/2" hose — ₹620/m\nFittings — varies', rating:'A', notes:'Genuine Eaton parts. 7-day delivery on orders >₹50k.' },
+    { id:'V004', name:'Fenner Pune', contact:'Office', phone:'+91 96220 44444', city:'Pune', gst:'27AAACF3456D1Z7', email:'pune@fenner-india.com', processTags:[], materialTags:['Consumables','Tools'], projectTags:['Factory Maintenance'], rates:'V-belt B-72 — ₹380/nos\nV-belt B-60 — ₹320/nos', rating:'B', notes:'OEM belts. Walk-in counter.' },
+    { id:'V005', name:'Pune Fab Works', contact:'Suresh', phone:'+91 95220 55555', city:'Pune (Bhosari)', gst:'27AAEFP1122E1Z3', email:'punefab@gmail.com', processTags:['Welding','Fabrication','Painting / Powder Coating'], materialTags:['MS / Steel'], projectTags:['Rescue Equipment (Production)','R&D / Prototyping','Client / Custom Project'], rates:'Welding labour — ₹450/hr\nFabrication (skilled) — ₹600/hr\nPainting — ₹40/sqft', rating:'B', notes:'Job-work partner for prototypes. Quote per job.' },
+    { id:'V006', name:'WIKA India', contact:'Tech Sales', phone:'+91 94220 66666', city:'Mumbai', gst:'27AAACW7788F1Z1', email:'sales@wika.in', processTags:[], materialTags:['Electricals'], projectTags:['R&D / Prototyping'], rates:'Pressure transducer 0-700bar — ₹13,500/nos\n4-20mA gauge — ₹4,200/nos', rating:'A', notes:'Calibration cert included. 2-week lead time.' },
+    { id:'V007', name:'JK Paper Dealer', contact:'Counter', phone:'+91 93220 77777', city:'Pune', gst:'27AAACJ2233G1Z8', email:'', processTags:[], materialTags:['Consumables'], projectTags:['Admin / Office'], rates:'A4 75 GSM — ₹320/ream\nA3 — ₹540/ream', rating:'B', notes:'Office stationery.' }
+  ];
+}
+
+/* ===== PERSISTENCE ===== */
+function saveVendors() { try { localStorage.setItem(VENDOR_KEY, JSON.stringify(state.vendors)); } catch(e){} }
+function loadVendors() {
+  try {
+    const raw = localStorage.getItem(VENDOR_KEY);
+    if (raw) { state.vendors = JSON.parse(raw); return; }
+  } catch(e){}
+  state.vendors = seedVendors();
+  saveVendors();
+}
+function saveSettingsToStorage() { try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(state.settings)); } catch(e){} }
+function loadSettings() {
+  try {
+    const raw = localStorage.getItem(SETTINGS_KEY);
+    if (raw) state.settings = Object.assign(state.settings, JSON.parse(raw));
+  } catch(e){}
+}
+
+/* ===== VENDOR DIRECTORY UI ===== */
+function renderVendorMaster() {
+  const list = document.getElementById('vendorMasterList');
+  const filtersEl = document.getElementById('vendorTagFilters');
+  const search = (document.getElementById('vendorSearch').value || '').toLowerCase().trim();
+
+  // tag filters
+  const filterOpts = [
+    { v: 'all', label: 'All Vendors' },
+    ...PROCESS_TAGS.map(t => ({ v: 'p:' + t, label: t })),
+    ...MATERIAL_TAGS.map(t => ({ v: 'm:' + t, label: t })),
+    ...PROJECTS.map(t => ({ v: 'j:' + t, label: t.split(/[(\—]/)[0].trim() }))
+  ];
+  filtersEl.innerHTML = filterOpts.map(o =>
+    '<button class="filter-chip' + (state.vendorTagFilter === o.v ? ' active' : '') +
+    '" onclick="setVendorFilter(\'' + o.v.replace(/'/g, "\\'") + '\')">' + escapeHtml(o.label) + '</button>'
+  ).join('');
+
+  let items = state.vendors.slice();
+  if (state.vendorTagFilter !== 'all') {
+    const [kind, tag] = state.vendorTagFilter.split(':');
+    items = items.filter(v => {
+      if (kind === 'p') return (v.processTags||[]).includes(tag);
+      if (kind === 'm') return (v.materialTags||[]).includes(tag);
+      if (kind === 'j') return (v.projectTags||[]).includes(tag);
+      return true;
+    });
+  }
+  if (search) {
+    items = items.filter(v =>
+      v.name.toLowerCase().includes(search) ||
+      (v.city||'').toLowerCase().includes(search) ||
+      (v.contact||'').toLowerCase().includes(search) ||
+      (v.rates||'').toLowerCase().includes(search)
+    );
+  }
+
+  // sort A first, then B, etc.
+  const ratingOrder = { A:1, B:2, C:3, N:4 };
+  items.sort((a,b) => (ratingOrder[a.rating]||9) - (ratingOrder[b.rating]||9) || a.name.localeCompare(b.name));
+
+  document.getElementById('vendorCount').textContent = items.length + ' shown · ' + state.vendors.length + ' total';
+
+  if (items.length === 0) {
+    list.innerHTML = '<div class="empty-state"><div class="ico">🏭</div><b>No vendors</b>Tap + New to add the first one.</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(v => {
+    const tags = [
+      ...(v.processTags||[]).map(t => '<span class="vm-tag vm-tag-process">' + escapeHtml(t) + '</span>'),
+      ...(v.materialTags||[]).map(t => '<span class="vm-tag vm-tag-material">' + escapeHtml(t) + '</span>'),
+      ...(v.projectTags||[]).map(t => '<span class="vm-tag vm-tag-project">' + escapeHtml(t.split(/[(\—]/)[0].trim()) + '</span>')
+    ].join('');
+    const ratingTxt = { A: 'A · Preferred', B: 'B · Approved', C: 'C · Backup', N: 'New' }[v.rating] || v.rating;
+    return `
+      <div class="vendor-master-card" onclick="openVendorEdit('${v.id}')">
+        <div class="vm-head">
+          <div style="flex:1;">
+            <div class="vm-name">${escapeHtml(v.name)}</div>
+            <div class="vm-contact">${v.contact ? escapeHtml(v.contact) + ' · ' : ''}${escapeHtml(v.phone||'')}${v.city ? ' · ' + escapeHtml(v.city) : ''}</div>
+          </div>
+          <span class="vm-rating">${ratingTxt}</span>
+        </div>
+        ${tags ? '<div class="vm-tags">' + tags + '</div>' : ''}
+        ${v.rates ? '<div class="vm-rates">' + escapeHtml(v.rates).replace(/\n/g, '<br/>') + '</div>' : ''}
+      </div>
+    `;
+  }).join('');
+}
+function setVendorFilter(v) {
+  state.vendorTagFilter = v;
+  renderVendorMaster();
+}
+
+/* ===== VENDOR EDIT MODAL ===== */
+function openVendorEdit(id) {
+  const v = id ? state.vendors.find(x => x.id === id) : null;
+  document.getElementById('vendorModalTitle').textContent = v ? 'Edit Vendor' : 'New Vendor';
+  document.getElementById('vmId').value = v ? v.id : '';
+  document.getElementById('vmName').value = v?.name || '';
+  document.getElementById('vmContact').value = v?.contact || '';
+  document.getElementById('vmPhone').value = v?.phone || '';
+  document.getElementById('vmCity').value = v?.city || '';
+  document.getElementById('vmGst').value = v?.gst || '';
+  document.getElementById('vmEmail').value = v?.email || '';
+  document.getElementById('vmRates').value = v?.rates || '';
+  document.getElementById('vmRating').value = v?.rating || 'N';
+  document.getElementById('vmNotes').value = v?.notes || '';
+  document.getElementById('vmDeleteBtn').style.display = v ? 'block' : 'none';
+
+  state.vendorFormTags = {
+    process: v ? [...(v.processTags||[])] : [],
+    material: v ? [...(v.materialTags||[])] : [],
+    project: v ? [...(v.projectTags||[])] : []
+  };
+  renderTagPickers();
+  document.getElementById('vendorModal').classList.add('show');
+}
+function renderTagPickers() {
+  document.getElementById('tagsProcess').innerHTML = PROCESS_TAGS.map(t =>
+    '<button type="button" class="tag-pick' + (state.vendorFormTags.process.includes(t) ? ' active' : '') + '" onclick="toggleTag(\'process\',\'' + t.replace(/'/g, "\\'") + '\')">' + escapeHtml(t) + '</button>'
+  ).join('');
+  document.getElementById('tagsMaterial').innerHTML = MATERIAL_TAGS.map(t =>
+    '<button type="button" class="tag-pick' + (state.vendorFormTags.material.includes(t) ? ' active' : '') + '" onclick="toggleTag(\'material\',\'' + t.replace(/'/g, "\\'") + '\')">' + escapeHtml(t) + '</button>'
+  ).join('');
+  document.getElementById('tagsProject').innerHTML = PROJECTS.map(t =>
+    '<button type="button" class="tag-pick' + (state.vendorFormTags.project.includes(t) ? ' active' : '') + '" onclick="toggleTag(\'project\',\'' + t.replace(/'/g, "\\'") + '\')">' + escapeHtml(t.split(/[(\—]/)[0].trim()) + '</button>'
+  ).join('');
+}
+function toggleTag(kind, tag) {
+  const arr = state.vendorFormTags[kind];
+  const idx = arr.indexOf(tag);
+  if (idx >= 0) arr.splice(idx, 1); else arr.push(tag);
+  renderTagPickers();
+}
+function closeVendorModal() {
+  document.getElementById('vendorModal').classList.remove('show');
+}
+function saveVendor(ev) {
+  ev.preventDefault();
+  const id = document.getElementById('vmId').value || ('V' + String(Date.now()).slice(-6));
+  const payload = {
+    id,
+    name: document.getElementById('vmName').value.trim(),
+    contact: document.getElementById('vmContact').value.trim(),
+    phone: document.getElementById('vmPhone').value.trim(),
+    city: document.getElementById('vmCity').value.trim(),
+    gst: document.getElementById('vmGst').value.trim(),
+    email: document.getElementById('vmEmail').value.trim(),
+    processTags: [...state.vendorFormTags.process],
+    materialTags: [...state.vendorFormTags.material],
+    projectTags: [...state.vendorFormTags.project],
+    rates: document.getElementById('vmRates').value.trim(),
+    rating: document.getElementById('vmRating').value,
+    notes: document.getElementById('vmNotes').value.trim()
+  };
+  const existingIdx = state.vendors.findIndex(x => x.id === id);
+  if (existingIdx >= 0) state.vendors[existingIdx] = payload;
+  else state.vendors.unshift(payload);
+  saveVendors();
+  closeVendorModal();
+  renderVendorMaster();
+  toast('Vendor saved');
+}
+function deleteVendor() {
+  const id = document.getElementById('vmId').value;
+  if (!id) return;
+  if (!confirm('Delete this vendor? This cannot be undone.')) return;
+  state.vendors = state.vendors.filter(x => x.id !== id);
+  saveVendors();
+  closeVendorModal();
+  renderVendorMaster();
+  toast('Vendor deleted');
+}
+
+/* ===== FILE UPLOAD HANDLING ===== */
+function fileToBase64(file) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = rej;
+    r.readAsDataURL(file);
+  });
+}
+
+async function attachFile(requestId, kind, files) {
+  const r = state.requests.find(x => x.id === requestId);
+  if (!r) return;
+  if (!r.attachments) r.attachments = [];
+  const SIZE_LIMIT = 2 * 1024 * 1024; // 2MB per file (browser-only mode)
+  for (const f of files) {
+    if (f.size > SIZE_LIMIT) {
+      alert('"' + f.name + '" is ' + (f.size/1024/1024).toFixed(1) + 'MB — too large for browser storage. Drive sync (next phase) will handle bigger files.');
+      continue;
+    }
+    const dataUrl = await fileToBase64(f);
+    r.attachments.push({
+      id: 'AT' + Date.now() + Math.random().toString(36).slice(2,5),
+      kind, // 'quotation' | 'po' | 'invoice' | 'other'
+      name: f.name,
+      type: f.type,
+      size: f.size,
+      data: dataUrl,
+      uploadedAt: Date.now(),
+      uploadedBy: state.currentRole === 'purchase' ? 'Purchase Head' : (state.currentRole === 'approver' ? 'GM' : 'User')
+    });
+    r.history.push({ at: Date.now(), by: state.currentRole === 'purchase' ? 'Purchase Head' : 'User', note: 'Attached ' + kind + ': ' + f.name });
+  }
+  save();
+  toast('Uploaded');
+  // refresh
+  if (document.getElementById('detailModal').classList.contains('show')) openDetail(requestId);
+  if (document.getElementById('screen-queue').classList.contains('active')) renderQueue();
+}
+
+function removeAttachment(requestId, attId) {
+  const r = state.requests.find(x => x.id === requestId);
+  if (!r || !r.attachments) return;
+  if (!confirm('Remove this attachment?')) return;
+  const att = r.attachments.find(a => a.id === attId);
+  r.attachments = r.attachments.filter(a => a.id !== attId);
+  if (att) r.history.push({ at: Date.now(), by: state.currentRole === 'purchase' ? 'Purchase Head' : 'User', note: 'Removed attachment: ' + att.name });
+  save();
+  openDetail(requestId);
+}
+
+function previewAttachment(requestId, attId) {
+  const r = state.requests.find(x => x.id === requestId);
+  const att = r?.attachments?.find(a => a.id === attId);
+  if (!att) return;
+  document.getElementById('previewTitle').textContent = att.name;
+  let body = '';
+  if (att.type.startsWith('image/')) {
+    body = '<img class="preview-img" src="' + att.data + '" alt="' + escapeHtml(att.name) + '" />';
+  } else if (att.type === 'application/pdf') {
+    body = '<iframe class="preview-pdf" src="' + att.data + '"></iframe>';
+  } else {
+    body = '<div style="text-align:center;padding:40px 20px;"><div style="font-size:40px;margin-bottom:10px;">📄</div><b style="display:block;margin-bottom:6px;">' + escapeHtml(att.name) + '</b><span style="color:var(--gray-500);font-size:12px;">' + (att.size/1024).toFixed(1) + ' KB · ' + att.type + '</span></div>';
+  }
+  body += '<div style="display:flex;gap:8px;margin-top:14px;"><a href="' + att.data + '" download="' + escapeHtml(att.name) + '" class="btn btn-primary" style="flex:1;text-decoration:none;">Download</a></div>';
+  document.getElementById('previewBody').innerHTML = body;
+  document.getElementById('previewModal').classList.add('show');
+}
+function closePreviewModal() {
+  document.getElementById('previewModal').classList.remove('show');
+}
+
+/* ===== ATTACHMENTS RENDER (used inside detail modal) ===== */
+function renderAttachmentsSection(r) {
+  const isPurchase = state.currentRole === 'purchase';
+  const kinds = [
+    { k: 'quotation', label: 'Vendor Quotation' },
+    { k: 'po',        label: 'Purchase Order'   },
+    { k: 'invoice',   label: 'Invoice / Bill'   },
+    { k: 'other',     label: 'Other'            }
+  ];
+
+  let html = '';
+
+  // existing attachments grouped by kind
+  const atts = r.attachments || [];
+  if (atts.length === 0) {
+    html += '<div style="font-size:11px;color:var(--gray-500);padding:4px 0 8px;">No documents attached yet.</div>';
+  }
+
+  kinds.forEach(({k, label}) => {
+    const grp = atts.filter(a => a.kind === k);
+    if (grp.length === 0) return;
+    html += '<div style="margin-bottom:8px;"><div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange-dark);margin-bottom:4px;">' + label + '</div>';
+    grp.forEach(a => {
+      const icon = a.type.startsWith('image/') ? 'IMG' : (a.type === 'application/pdf' ? 'PDF' : 'FILE');
+      html += `
+        <div class="attached-item">
+          <div class="ico">${icon}</div>
+          <div class="meta">
+            <div class="name">${escapeHtml(a.name)}</div>
+            <div class="info">${(a.size/1024).toFixed(1)} KB · ${escapeHtml(a.uploadedBy)} · ${ago(a.uploadedAt)}</div>
+          </div>
+          <button onclick="previewAttachment('${r.id}','${a.id}')">View</button>
+          ${isPurchase ? '<button class="del" onclick="removeAttachment(\'' + r.id + '\',\'' + a.id + '\')">Del</button>' : ''}
+        </div>`;
+    });
+    html += '</div>';
+  });
+
+  // upload zone — available to anyone viewing the request detail
+  html += `
+    <div style="margin-top:10px;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-700);margin-bottom:6px;">Upload New Document</div>
+      <div class="file-type-tabs" id="ftt-${r.id}">
+        <button type="button" class="file-type-tab active" data-kind="quotation" onclick="pickFileKind(this,'${r.id}')">Quotation</button>
+        <button type="button" class="file-type-tab" data-kind="po" onclick="pickFileKind(this,'${r.id}')">PO</button>
+        <button type="button" class="file-type-tab" data-kind="invoice" onclick="pickFileKind(this,'${r.id}')">Invoice</button>
+        <button type="button" class="file-type-tab" data-kind="other" onclick="pickFileKind(this,'${r.id}')">Other</button>
+      </div>
+      <label class="upload-zone" for="upload-${r.id}">
+        <span class="ico">📎</span>
+        Tap to attach photo / PDF
+        <small>PDF, JPG, PNG — max 25MB per file · saved to Drive</small>
+      </label>
+      <input type="file" id="upload-${r.id}" accept="image/*,application/pdf" multiple style="display:none;" onchange="handleUpload(event,'${r.id}')" />
+    </div>`;
+
+  return html;
+}
+function pickFileKind(btn, requestId) {
+  const tabs = document.getElementById('ftt-' + requestId);
+  if (!tabs) return;
+  tabs.querySelectorAll('.file-type-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+function handleUpload(ev, requestId) {
+  const tabs = document.getElementById('ftt-' + requestId);
+  const activeKind = tabs?.querySelector('.file-type-tab.active')?.dataset.kind || 'other';
+  const files = Array.from(ev.target.files || []);
+  if (files.length) attachFile(requestId, activeKind, files);
+  ev.target.value = '';
+}
+
+/* ===== WHATSAPP ROUTING ===== */
+function getRecipientsFor(r) {
+  // returns array of { role, number } based on settings + rules
+  const s = state.settings;
+  const recipients = [];
+  const add = (role, num) => { if (num && !recipients.find(x => x.number === num)) recipients.push({ role, number: num }); };
+
+  // Purchase Head always gets it
+  add('Purchase Head', s.waPurchase);
+
+  // Below threshold = no approval needed, only Purchase
+  if (r.amount < s.threshold) return recipients;
+
+  // Personal projects → Director (config)
+  if (r.project && r.project.toLowerCase().includes('personal')) {
+    if (s.routePersonal === 'director') add('Director', s.waDirector);
+    else add('GM', s.waGm);
+  } else {
+    add('GM', s.waGm);
+  }
+
+  // Big amount → also Director
+  if (r.amount >= (s.routeBigAmt || 100000)) add('Director', s.waDirector);
+
+  // Critical urgency → notify everyone
+  if (r.urgency === 'critical' && s.routeCritical === 'all') {
+    add('GM', s.waGm);
+    add('Director', s.waDirector);
+  }
+  return recipients;
+}
+
+function whatsappMessageFor(r) {
+  const lines = [
+    '*SMART — Purchase Request*',
+    '',
+    'ID: ' + r.id,
+    'By: ' + r.requester,
+    'Item: ' + r.item,
+    'Qty: ' + r.qty,
+    'Est: ' + inr(r.amount),
+    'Project: ' + r.project + (r.ref ? ' / ' + r.ref : ''),
+    'Urgency: ' + r.urgency.toUpperCase() + (r.requiredBy ? ' (by ' + r.requiredBy + ')' : ''),
+    'Status: ' + STATUS_LABEL[r.status]
+  ];
+  if (r.reason) lines.push('', 'Reason: ' + r.reason);
+  if (r.vendors && r.vendors.length) {
+    const best = r.vendors.reduce((b,v) => v.rate < b.rate ? v : b, r.vendors[0]);
+    lines.push('', 'Best quote: ' + best.name + ' @ ₹' + best.rate.toLocaleString('en-IN'));
+  }
+  if (r.status === 'pending_approval') {
+    lines.push('', '⚠️ NEEDS YOUR APPROVAL');
+  }
+  return lines.join('\n');
+}
+
+function notifyOnWhatsApp(requestId) {
+  const r = state.requests.find(x => x.id === requestId);
+  if (!r) return;
+  const recipients = getRecipientsFor(r);
+  if (recipients.length === 0) {
+    alert('No WhatsApp numbers configured. Open Settings to add them.');
+    navTo('settings');
+    return;
+  }
+  const msg = encodeURIComponent(whatsappMessageFor(r));
+  // Open one tab per recipient
+  recipients.forEach((rcp, idx) => {
+    setTimeout(() => {
+      window.open('https://wa.me/' + rcp.number + '?text=' + msg, '_blank');
+    }, idx * 250);
+  });
+  toast('Opening WhatsApp · ' + recipients.length + ' recipient(s)');
+}
+
+/* ===== SETTINGS UI ===== */
+function renderSettings() {
+  const s = state.settings;
+  document.getElementById('setThreshold').value = s.threshold;
+  document.getElementById('setWaPurchase').value = s.waPurchase;
+  document.getElementById('setWaGm').value = s.waGm;
+  document.getElementById('setWaDirector').value = s.waDirector;
+  document.getElementById('setRoutePersonal').value = s.routePersonal;
+  document.getElementById('setRouteBigAmt').value = s.routeBigAmt;
+  document.getElementById('setRouteCritical').value = s.routeCritical;
+}
+function saveSettings() {
+  state.settings.threshold = Number(document.getElementById('setThreshold').value) || 10000;
+  state.settings.waPurchase = document.getElementById('setWaPurchase').value.replace(/\D/g,'');
+  state.settings.waGm = document.getElementById('setWaGm').value.replace(/\D/g,'');
+  state.settings.waDirector = document.getElementById('setWaDirector').value.replace(/\D/g,'');
+  state.settings.routePersonal = document.getElementById('setRoutePersonal').value;
+  state.settings.routeBigAmt = Number(document.getElementById('setRouteBigAmt').value) || 100000;
+  state.settings.routeCritical = document.getElementById('setRouteCritical').value;
+  saveSettingsToStorage();
+  toast('Settings saved');
+}
+
+/* ===== DATA TOOLS ===== */
+function exportAllJson() {
+  const blob = new Blob([JSON.stringify({
+    requests: state.requests,
+    vendors: state.vendors,
+    settings: state.settings,
+    exportedAt: new Date().toISOString()
+  }, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'smart-purchase-backup-' + new Date().toISOString().split('T')[0] + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('Backup downloaded');
+}
+function importJson(ev) {
+  const f = ev.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const data = JSON.parse(r.result);
+      if (!confirm('Replace all current data with this backup? This cannot be undone.')) return;
+      if (data.requests) { state.requests = data.requests; save(); }
+      if (data.vendors) { state.vendors = data.vendors; saveVendors(); }
+      if (data.settings) { state.settings = Object.assign(state.settings, data.settings); saveSettingsToStorage(); }
+      toast('Imported');
+      renderSettings();
+    } catch(e) { alert('Invalid backup file: ' + e.message); }
+  };
+  r.readAsText(f);
+  ev.target.value = '';
+}
+function resetAll() {
+  if (!confirm('Reset ALL data? This deletes every request, vendor, and setting on this device.')) return;
+  if (!confirm('Are you absolutely sure? This is permanent.')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(VENDOR_KEY);
+  localStorage.removeItem(SETTINGS_KEY);
+  location.reload();
+}
+
+/* ===== INIT — extends v1 init ===== */
+loadVendors();
+loadSettings();
+
+
+/* ===========================================================
+   V2.1 — BACKEND INTEGRATION (Google Apps Script Web App)
+   Strategy: localStorage stays as offline cache. On every save,
+   we ALSO push to the backend (fire-and-forget, non-blocking).
+   On app load, we PULL from backend and replace local state.
+   =========================================================== */
+
+const BACKEND_URL = "https://script.google.com/macros/s/AKfycbzkisR7xFxn__BEwDLHqDJbBheiCzMOdzgM21V_yroB-96cU7nA0zJcyX9m2x3oJgkm/exec";
+const SYNC_QUEUE_KEY = "smart_sync_queue_v1";
+
+let _syncQueue = [];
+let _syncing = false;
+let _online = navigator.onLine;
+let _lastSync = null;
+
+function loadSyncQueue() {
+  try { _syncQueue = JSON.parse(localStorage.getItem(SYNC_QUEUE_KEY) || "[]"); } catch(e) { _syncQueue = []; }
+}
+function saveSyncQueue() {
+  try { localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(_syncQueue)); } catch(e){}
+}
+
+/* Apps Script web apps use 302 redirects + don't accept JSON content-type without CORS preflight.
+   Trick: send as form-encoded text/plain so the browser does a "simple request" without preflight.
+   The script reads e.postData.contents and JSON.parses it. */
+function backendCall(action, payload) {
+  if (!BACKEND_URL || BACKEND_URL.indexOf('script.google.com') < 0) {
+    return Promise.reject(new Error('Backend not configured'));
+  }
+  const body = JSON.stringify({ action, payload: payload || {} });
+  return fetch(BACKEND_URL, {
+    method: 'POST',
+    mode: 'cors',
+    redirect: 'follow',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body
+  }).then(r => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }).then(j => {
+    if (j && j.ok === false) throw new Error(j.error || 'backend error');
+    return j;
+  });
+}
+
+/* Pull everything from backend and replace local state. Called on app start. */
+async function pullFromBackend(silent) {
+  try {
+    setSyncStatus('syncing');
+    const j = await backendCall('pull', {});
+    if (j && j.ok) {
+      if (Array.isArray(j.requests)) state.requests = j.requests;
+      if (Array.isArray(j.vendors))  state.vendors  = j.vendors;
+      if (j.settings && Object.keys(j.settings).length) state.settings = Object.assign(state.settings, j.settings);
+      save(); saveVendors(); saveSettingsToStorage();
+      _lastSync = Date.now();
+      setSyncStatus('online');
+      if (!silent) toast('Synced from cloud');
+      // Re-render whatever screen is open
+      refreshActiveScreen();
+    }
+  } catch (e) {
+    setSyncStatus('offline');
+    if (!silent) toast('Offline — using cached data');
+  }
+}
+
+function refreshActiveScreen() {
+  const active = document.querySelector('.screen.active');
+  if (!active) return;
+  const id = active.id.replace('screen-','');
+  if (id === 'queue') renderQueue();
+  if (id === 'approver') renderApprovals();
+  if (id === 'reports') renderReports();
+  if (id === 'ledger') renderLedger();
+  if (id === 'vendors') renderVendorMaster();
+  if (id === 'settings') renderSettings();
+}
+
+/* Queue an action for backend sync. Tries immediately; if it fails, holds for retry. */
+function syncAction(action, payload) {
+  _syncQueue.push({ action, payload, ts: Date.now() });
+  saveSyncQueue();
+  flushSyncQueue();
+}
+
+async function flushSyncQueue() {
+  if (_syncing) return;
+  if (_syncQueue.length === 0) return;
+  if (!navigator.onLine) { setSyncStatus('offline'); return; }
+  _syncing = true; setSyncStatus('syncing');
+  while (_syncQueue.length > 0) {
+    const job = _syncQueue[0];
+    try {
+      await backendCall(job.action, job.payload);
+      _syncQueue.shift();
+      saveSyncQueue();
+    } catch (e) {
+      console.warn('Sync failed, will retry:', e.message);
+      setSyncStatus('offline');
+      _syncing = false;
+      return;
+    }
+  }
+  _syncing = false;
+  _lastSync = Date.now();
+  setSyncStatus('online');
+}
+
+window.addEventListener('online',  () => { _online = true;  flushSyncQueue(); });
+window.addEventListener('offline', () => { _online = false; setSyncStatus('offline'); });
+
+/* Sync status pill in the top-bar */
+function setSyncStatus(s) {
+  const el = document.getElementById('syncPill');
+  if (!el) return;
+  el.dataset.state = s;
+  if (s === 'online')  el.textContent = '● Online';
+  if (s === 'syncing') el.textContent = '⟳ Syncing';
+  if (s === 'offline') el.textContent = '○ Offline (' + _syncQueue.length + ')';
+}
+
+/* === Wrap the existing local saves with backend pushes === */
+const _origSubmit = submitRequest;
+submitRequest = function(ev) {
+  ev.preventDefault();
+  // Re-implement with backend hook
+  const vendors = [];
+  document.querySelectorAll('#vendorList .vendor-row').forEach(r => {
+    const name = r.querySelector('.v-name').value.trim();
+    const rate = r.querySelector('.v-rate').value;
+    if (name && rate) vendors.push({ name, rate: Number(rate) });
+  });
+  const amt = Number(document.getElementById('reqAmt').value);
+  const requester = document.getElementById('reqBy').value;
+  const threshold = (state.settings && state.settings.threshold) || APPROVAL_THRESHOLD;
+  const autoApprove = amt < threshold;
+  const now = Date.now();
+  const r = {
+    id: newId(), requester,
+    item: document.getElementById('reqItem').value.trim(),
+    qty: document.getElementById('reqQty').value.trim(),
+    amount: amt,
+    project: document.getElementById('reqProject').value,
+    ref: document.getElementById('reqRef').value.trim(),
+    urgency: state.currentUrgency,
+    requiredBy: document.getElementById('reqDate').value,
+    reason: document.getElementById('reqReason').value.trim(),
+    vendors,
+    spec: document.getElementById('reqSpec').value.trim(),
+    attachments: [],
+    status: autoApprove ? 'approved' : 'pending_approval',
+    createdAt: now,
+    history: [{ at: now, by: requester, note: 'Request raised' }]
+  };
+  if (autoApprove) {
+    r.history.push({ at: now+1, by: 'System', note: 'Auto-approved (below ₹' + threshold.toLocaleString('en-IN') + ')' });
+  }
+  state.requests.unshift(r);
+  save();
+  syncAction('pushRequest', r);
+  toast(autoApprove ? 'Submitted → Purchase Queue' : 'Submitted → GM Approval');
+  resetForm();
+  setTimeout(() => {
+    const recipients = getRecipientsFor(r);
+    if (recipients.length === 0) {
+      if (confirm('Request ' + r.id + ' saved.\n\nNo WhatsApp recipients configured. Open Settings now?')) navTo('settings');
+      return;
+    }
+    const names = recipients.map(x => x.role).join(', ');
+    if (confirm('Request ' + r.id + ' saved.\n\nNotify ' + names + ' on WhatsApp?')) notifyOnWhatsApp(r.id);
+  }, 250);
+};
+
+const _origUpdateStatus = updateStatus;
+updateStatus = function(id, newStatus) {
+  const r = state.requests.find(x => x.id === id);
+  if (!r) return;
+  const by = state.currentRole === 'approver' ? 'GM' : (state.currentRole === 'purchase' ? 'Purchase Head' : 'User');
+  r.status = newStatus;
+  r.history.push({ at: Date.now(), by, note: 'Status → ' + STATUS_LABEL[newStatus] });
+  save();
+  syncAction('pushRequest', r);
+  toast(STATUS_LABEL[newStatus]);
+  if (document.getElementById('screen-queue').classList.contains('active')) renderQueue();
+  if (document.getElementById('screen-approver').classList.contains('active')) renderApprovals();
+  closeModal();
+};
+
+const _origSaveVendor = saveVendor;
+saveVendor = function(ev) {
+  ev.preventDefault();
+  const id = document.getElementById('vmId').value || ('V' + String(Date.now()).slice(-6));
+  const payload = {
+    id,
+    name: document.getElementById('vmName').value.trim(),
+    contact: document.getElementById('vmContact').value.trim(),
+    phone: document.getElementById('vmPhone').value.trim(),
+    city: document.getElementById('vmCity').value.trim(),
+    gst: document.getElementById('vmGst').value.trim(),
+    email: document.getElementById('vmEmail').value.trim(),
+    processTags: [...state.vendorFormTags.process],
+    materialTags: [...state.vendorFormTags.material],
+    projectTags: [...state.vendorFormTags.project],
+    rates: document.getElementById('vmRates').value.trim(),
+    rating: document.getElementById('vmRating').value,
+    notes: document.getElementById('vmNotes').value.trim()
+  };
+  const existingIdx = state.vendors.findIndex(x => x.id === id);
+  if (existingIdx >= 0) state.vendors[existingIdx] = payload;
+  else state.vendors.unshift(payload);
+  saveVendors();
+  syncAction('pushVendor', payload);
+  closeVendorModal();
+  renderVendorMaster();
+  toast('Vendor saved');
+};
+
+const _origDeleteVendor = deleteVendor;
+deleteVendor = function() {
+  const id = document.getElementById('vmId').value;
+  if (!id) return;
+  if (!confirm('Delete this vendor? This cannot be undone.')) return;
+  state.vendors = state.vendors.filter(x => x.id !== id);
+  saveVendors();
+  syncAction('deleteVendor', { id });
+  closeVendorModal();
+  renderVendorMaster();
+  toast('Vendor deleted');
+};
+
+const _origSaveSettings = saveSettings;
+saveSettings = function() {
+  state.settings.threshold = Number(document.getElementById('setThreshold').value) || 10000;
+  state.settings.waPurchase = document.getElementById('setWaPurchase').value.replace(/\D/g,'');
+  state.settings.waGm = document.getElementById('setWaGm').value.replace(/\D/g,'');
+  state.settings.waDirector = document.getElementById('setWaDirector').value.replace(/\D/g,'');
+  state.settings.routePersonal = document.getElementById('setRoutePersonal').value;
+  state.settings.routeBigAmt = Number(document.getElementById('setRouteBigAmt').value) || 100000;
+  state.settings.routeCritical = document.getElementById('setRouteCritical').value;
+  saveSettingsToStorage();
+  syncAction('pushSettings', state.settings);
+  toast('Settings saved');
+};
+
+/* ===== File upload — goes to Drive via backend ===== */
+const _origAttachFile = attachFile;
+attachFile = async function(requestId, kind, files) {
+  const r = state.requests.find(x => x.id === requestId);
+  if (!r) return;
+  if (!r.attachments) r.attachments = [];
+  const SIZE_LIMIT = 25 * 1024 * 1024; // 25MB now that Drive is the store
+  for (const f of files) {
+    if (f.size > SIZE_LIMIT) {
+      alert('"' + f.name + '" is ' + (f.size/1024/1024).toFixed(1) + 'MB — over the 25MB limit.');
+      continue;
+    }
+    toast('Uploading ' + f.name + '…');
+    try {
+      const dataUrl = await fileToBase64(f);
+      const resp = await backendCall('uploadFile', {
+        requestId: r.id,
+        project: r.project,
+        kind,
+        name: f.name,
+        dataUrl,
+        uploadedBy: state.currentRole === 'purchase' ? 'Purchase Head' : (state.currentRole === 'approver' ? 'GM' : 'User')
+      });
+      if (resp && resp.ok && resp.attachment) {
+        r.attachments.push(resp.attachment);
+        r.history.push({ at: Date.now(), by: 'Purchase Head', note: 'Attached ' + kind + ': ' + f.name });
+        save();
+        toast('Uploaded: ' + f.name);
+      }
+    } catch (e) {
+      console.error(e);
+      alert('Upload failed: ' + e.message + '\n\nFile saved locally only — re-upload when online.');
+    }
+  }
+  if (document.getElementById('detailModal').classList.contains('show')) openDetail(requestId);
+};
+
+const _origPreviewAttachment = previewAttachment;
+previewAttachment = function(requestId, attId) {
+  const r = state.requests.find(x => x.id === requestId);
+  const att = r?.attachments?.find(a => a.id === attId);
+  if (!att) return;
+  // If we have a Drive URL, open in new tab (works for everything)
+  if (att.driveUrl) {
+    window.open(att.driveUrl, '_blank');
+    return;
+  }
+  // Fallback to base64 preview (only for legacy local-only files)
+  if (att.data) return _origPreviewAttachment(requestId, attId);
+  alert('No preview available.');
+};
+
+const _origRemoveAttachment = removeAttachment;
+removeAttachment = function(requestId, attId) {
+  const r = state.requests.find(x => x.id === requestId);
+  if (!r || !r.attachments) return;
+  if (!confirm('Remove this attachment? It will also be deleted from Drive.')) return;
+  const att = r.attachments.find(a => a.id === attId);
+  r.attachments = r.attachments.filter(a => a.id !== attId);
+  if (att) r.history.push({ at: Date.now(), by: 'Purchase Head', note: 'Removed attachment: ' + att.name });
+  save();
+  if (att) syncAction('deleteFile', { attachmentId: attId });
+  openDetail(requestId);
+};
+
+/* ===== Manual sync button ===== */
+function manualSync() {
+  flushSyncQueue();
+  pullFromBackend(false);
+}
+
+/* ===== Boot — pull on load ===== */
+loadSyncQueue();
+setSyncStatus(navigator.onLine ? 'online' : 'offline');
+// Pull cloud data on first load (silent — no toast unless something changes)
+setTimeout(() => pullFromBackend(true), 100);
+// Periodic flush every 30s in case of failed syncs
+setInterval(() => { if (_syncQueue.length) flushSyncQueue(); }, 30000);
+
+</script>
+</body>
+</html>
